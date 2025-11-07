@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Package, Truck, Zap, Cog } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import productParts from "@/assets/product-parts.jpg";
 import productMachinery from "@/assets/product-machinery.jpg";
 import productConveyors from "@/assets/product-conveyors.jpg";
@@ -61,7 +62,10 @@ const ProductTypes = () => {
               transition={{ duration: 0.4, delay: index * 0.1 }}
               className="group"
             >
-              <div className="bg-card rounded-lg overflow-hidden hover-lift shadow-lg">
+              <div 
+                className="bg-card rounded-lg overflow-hidden hover-lift shadow-lg cursor-pointer transition-all duration-300 hover:shadow-accent/20"
+                onClick={() => console.log(`Clicked: ${product.title}`)}
+              >
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src={product.image}
@@ -90,6 +94,18 @@ const ProductTypes = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center mt-12"
+        >
+          <Button variant="cta" size="lg">
+            Ver más
+          </Button>
+        </motion.div>
       </div>
     </section>
   );
