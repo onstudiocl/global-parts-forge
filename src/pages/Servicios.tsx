@@ -86,17 +86,17 @@ const Servicios = () => {
       </section>
 
       {/* Services Menu */}
-      <section className="py-8 bg-background sticky top-16 z-40 border-b border-border">
+      <section className="py-4 bg-background sticky top-16 z-40 border-b border-border">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-2">
             {services.map((service) => (
               <button
                 key={service.id}
                 onClick={() => setActiveService(service.id)}
                 className="relative group"
               >
-                <div className="flex flex-col items-center space-y-2 p-4 rounded-lg hover:bg-secondary/50 transition-colors">
-                  <div className="w-16 h-16 rounded-lg overflow-hidden">
+                <div className="flex flex-col items-center space-y-1 p-2 rounded-lg hover:bg-secondary/50 transition-colors">
+                  <div className="w-8 h-8 rounded-lg overflow-hidden">
                     <img
                       src={service.image}
                       alt={service.name}
@@ -104,7 +104,7 @@ const Servicios = () => {
                     />
                   </div>
                   <span
-                    className={`text-sm font-medium transition-colors ${
+                    className={`text-xs font-medium transition-colors ${
                       activeService === service.id ? "text-accent" : "text-foreground"
                     }`}
                   >
