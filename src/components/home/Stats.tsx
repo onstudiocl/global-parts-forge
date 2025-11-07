@@ -8,8 +8,8 @@ const Stats = () => {
     offset: ["start end", "end start"],
   });
 
-  const leftX = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
-  const rightX = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const leftX = useTransform(scrollYProgress, [0, 1], ["-20%", "0%"]);
+  const rightX = useTransform(scrollYProgress, [0, 1], ["20%", "0%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.6, 1, 0.6]);
 
   return (
