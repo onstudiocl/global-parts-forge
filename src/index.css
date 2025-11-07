@@ -8,119 +8,114 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Base colors - Industrial palette */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 29.4%;
+    /* Dark mode by default - Tech industrial palette */
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
     
     /* Card surfaces */
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 29.4%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
     
     /* Popover */
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 29.4%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
     
-    /* Primary - Dark gray industrial */
-    --primary: 0 0% 29.4%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary - Tech gray */
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 7%;
     
-    /* Secondary - Light gray */
-    --secondary: 0 0% 95.7%;
-    --secondary-foreground: 0 0% 29.4%;
+    /* Secondary - Dark surface */
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 98%;
     
     /* Muted tones */
-    --muted: 0 0% 95.7%;
-    --muted-foreground: 0 0% 50%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
     
-    /* Accent - Salmon/Coral energy */
-    --accent: 9 100% 68.2%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent - Vibrant orange tech */
+    --accent: 14 100% 60%;
+    --accent-foreground: 0 0% 7%;
     
-    /* Hero variant - Salmon with glow */
-    --hero: 9 100% 68.2%;
-    --hero-foreground: 0 0% 100%;
-    --hero-glow: 9 100% 68.2%;
+    /* Hero variant - Orange with glow */
+    --hero: 14 100% 60%;
+    --hero-foreground: 0 0% 7%;
+    --hero-glow: 14 100% 60%;
     
     /* Destructive */
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 0 0% 98%;
     
     /* Borders and inputs */
-    --border: 0 0% 89.4%;
-    --input: 0 0% 89.4%;
-    --ring: 9 100% 68.2%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 14 100% 60%;
     
     --radius: 0.5rem;
     
-    /* Custom gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 29.4%) 0%, hsl(0 0% 20%) 100%);
-    --gradient-overlay: linear-gradient(180deg, hsl(0 0% 0% / 0.4) 0%, hsl(0 0% 0% / 0.7) 100%);
+    /* Custom gradients - Tech focused */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 10%) 0%, hsl(0 0% 5%) 100%);
+    --gradient-overlay: linear-gradient(180deg, hsl(0 0% 0% / 0.6) 0%, hsl(0 0% 0% / 0.85) 100%);
     
-    /* Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.1);
-    --shadow-glow: 0 0 20px hsl(9 100% 68.2% / 0.3);
+    /* Shadows with orange glow */
+    --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 25px hsl(14 100% 60% / 0.4);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 0 0% 9.8%;
-    --foreground: 0 0% 98%;
-    
-    --card: 0 0% 9.8%;
-    --card-foreground: 0 0% 98%;
-    
-    --popover: 0 0% 9.8%;
-    --popover-foreground: 0 0% 98%;
-    
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9.8%;
-    
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    
-    --accent: 9 100% 68.2%;
-    --accent-foreground: 0 0% 9.8%;
-    
-    --hero: 9 100% 68.2%;
-    --hero-foreground: 0 0% 100%;
-    --hero-glow: 9 100% 68.2%;
-    
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 9 100% 68.2%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-primary: 14 100% 60%;
+    --sidebar-primary-foreground: 0 0% 7%;
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 14 100% 60%;
+  }
+
+  .light {
+    /* Light mode (optional fallback) */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 7%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+    
+    --primary: 0 0% 7%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 0 0% 95.7%;
+    --secondary-foreground: 0 0% 7%;
+    
+    --muted: 0 0% 95.7%;
+    --muted-foreground: 0 0% 45%;
+    
+    --accent: 14 100% 60%;
+    --accent-foreground: 0 0% 100%;
+    
+    --hero: 14 100% 60%;
+    --hero-foreground: 0 0% 100%;
+    --hero-glow: 14 100% 60%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 89.4%;
+    --input: 0 0% 89.4%;
+    --ring: 14 100% 60%;
+    
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 14 100% 60%;
   }
 }
 
@@ -134,7 +129,7 @@ All colors MUST be HSL.
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
+    @apply font-heading font-extrabold;
   }
 }
 
