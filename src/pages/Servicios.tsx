@@ -10,6 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Settings, Lightbulb, Shield, Package } from "lucide-react";
 import productParts from "@/assets/product-parts.jpg";
 import productMachinery from "@/assets/product-machinery.jpg";
 import productConveyors from "@/assets/product-conveyors.jpg";
@@ -20,6 +21,7 @@ const services = [
   {
     id: "elementos-desgaste",
     name: "Elementos de desgaste",
+    icon: Settings,
     image: productParts,
     description: "Componentes de alta resistencia diseñados para soportar las condiciones más exigentes de la minería.",
     features: [
@@ -94,6 +96,7 @@ const services = [
   {
     id: "iluminacion",
     name: "Iluminación",
+    icon: Lightbulb,
     image: productMachinery,
     description: "Sistemas de iluminación industrial diseñados para mejorar la seguridad y productividad en operaciones mineras.",
     features: [
@@ -168,6 +171,7 @@ const services = [
   {
     id: "mantas-termicas",
     name: "Mantas térmicas",
+    icon: Shield,
     image: productConveyors,
     description: "Soluciones térmicas especializadas para protección y aislamiento de sistemas críticos en operaciones mineras.",
     features: [
@@ -242,6 +246,7 @@ const services = [
   {
     id: "otros-productos",
     name: "Otros productos",
+    icon: Package,
     image: productElectronics,
     description: "Amplia gama de productos complementarios para optimizar todas tus operaciones mineras.",
     features: [
@@ -355,37 +360,40 @@ const Servicios = () => {
       <section className="py-4 bg-background sticky top-16 z-40 border-b border-border">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-2">
-            {services.map((service) => (
-              <button
-                key={service.id}
-                onClick={() => setActiveService(service.id)}
-                className="relative group"
-              >
-                <div className="flex flex-col items-center space-y-1 p-2 rounded-lg hover:bg-secondary/50 transition-colors">
-                  <div className="w-8 h-8 rounded-lg overflow-hidden">
-                    <img
-                      src={service.image}
-                      alt={service.name}
-                      className="w-full h-full object-cover"
-                    />
+            {services.map((service) => {
+              const Icon = service.icon;
+              return (
+                <button
+                  key={service.id}
+                  onClick={() => setActiveService(service.id)}
+                  className="relative group"
+                >
+                  <div className="flex flex-col items-center space-y-1 p-2 rounded-lg hover:bg-secondary/50 transition-colors">
+                    <div className="w-8 h-8 rounded-lg flex items-center justify-center">
+                      <Icon 
+                        className={`w-6 h-6 transition-colors ${
+                          activeService === service.id ? "text-accent" : "text-foreground"
+                        }`}
+                      />
+                    </div>
+                    <span
+                      className={`text-xs font-medium transition-colors ${
+                        activeService === service.id ? "text-accent" : "text-foreground"
+                      }`}
+                    >
+                      {service.name}
+                    </span>
                   </div>
-                  <span
-                    className={`text-xs font-medium transition-colors ${
-                      activeService === service.id ? "text-accent" : "text-foreground"
-                    }`}
-                  >
-                    {service.name}
-                  </span>
-                </div>
-                {activeService === service.id && (
-                  <motion.div
-                    layoutId="activeService"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent"
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                  />
-                )}
-              </button>
-            ))}
+                  {activeService === service.id && (
+                    <motion.div
+                      layoutId="activeService"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent"
+                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                    />
+                  )}
+                </button>
+              );
+            })}
           </div>
         </div>
       </section>
