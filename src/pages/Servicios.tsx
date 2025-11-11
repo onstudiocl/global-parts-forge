@@ -14,6 +14,7 @@ import productParts from "@/assets/product-parts.jpg";
 import productMachinery from "@/assets/product-machinery.jpg";
 import productConveyors from "@/assets/product-conveyors.jpg";
 import productElectronics from "@/assets/product-electronics.jpg";
+import heroServiciosMineria from "@/assets/hero-servicios-mineria.jpg";
 
 const services = [
   {
@@ -323,18 +324,27 @@ const Servicios = () => {
       <Navbar />
       
       {/* Hero */}
-      <section className="pt-40 pb-24 bg-gradient-to-b from-secondary to-background">
-        <div className="container mx-auto px-4">
+      <section className="relative pt-40 pb-24 overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroServiciosMineria})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-background" />
+        </div>
+        
+        {/* Content */}
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-primary mb-8">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-8 drop-shadow-lg">
               Nuestros servicios y productos
             </h1>
-            <p className="text-2xl text-muted-foreground">
+            <p className="text-2xl text-white/90 drop-shadow-md">
               Soluciones integrales en repuestos mineros de las mejores marcas internacionales
             </p>
           </motion.div>
