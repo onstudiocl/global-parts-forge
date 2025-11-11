@@ -1,35 +1,9 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Calendar } from "lucide-react";
-
-const milestones = [
-  {
-    year: "1998",
-    title: "Fundación",
-    description: "Global Parts inicia operaciones en Santiago, Chile, con la visión de transformar el suministro de repuestos mineros.",
-  },
-  {
-    year: "2005",
-    title: "Expansión regional",
-    description: "Ampliamos nuestra cobertura a las principales zonas mineras del norte de Chile.",
-  },
-  {
-    year: "2012",
-    title: "Certificación internacional",
-    description: "Obtenemos certificaciones ISO 9001, consolidando nuestro compromiso con la calidad.",
-  },
-  {
-    year: "2018",
-    title: "Innovación tecnológica",
-    description: "Implementamos sistemas de gestión digital para optimizar tiempos de respuesta y trazabilidad.",
-  },
-  {
-    year: "2023",
-    title: "Liderazgo en el sector",
-    description: "Nos consolidamos como uno de los principales proveedores de repuestos mineros en Chile.",
-  },
-];
+import { Target, Eye, Zap } from "lucide-react";
+import heroImage from "@/assets/hero-sobre-nosotros.jpg";
+import logoWatermark from "@/assets/logo-global-parts-watermark.png";
 
 const QuienesSomos = () => {
   return (
@@ -37,111 +11,147 @@ const QuienesSomos = () => {
       <Navbar />
       
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-secondary to-background">
-        <div className="container mx-auto px-4">
+      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={heroImage}
+            alt="Equipo minero Global Parts"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-primary mb-6 drop-shadow-lg">
+              Más de 25 años manteniendo la minería chilena en movimiento
+            </h1>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* About Section with Watermark */}
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 flex items-center justify-center opacity-5">
+          <img
+            src={logoWatermark}
+            alt="Global Parts Logo"
+            className="w-[800px] h-[800px] object-contain"
+          />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
+            className="max-w-5xl mx-auto space-y-6 text-lg leading-relaxed text-muted-foreground"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary mb-6">
-              Quiénes Somos
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              Más de 25 años manteniendo la minería chilena en movimiento
+            <p>
+              <span className="text-2xl font-heading font-bold text-primary">Global Parts SpA</span> es una empresa chilena joven y dinámica, formada por profesionales con más de 25 años de experiencia en la industria minera, comprometidos con brindar soluciones confiables, innovadoras y sostenibles para las principales operaciones mineras del país.
+            </p>
+            
+            <p>
+              Especializada en la comercialización de repuestos, componentes y servicios técnicos para equipos mineros, Global Parts se consolida como un socio estratégico que entiende de primera mano las necesidades y exigencias del sector. Su equipo ha desarrollado una amplia trayectoria en áreas clave como mantenimiento de equipos, soporte técnico, gestión de proyectos y atención comercial, lo que permite entregar un servicio integral, ágil y de alto valor agregado.
+            </p>
+            
+            <p>
+              Con una visión enfocada en la eficiencia, la tecnología y la sostenibilidad, Global Parts busca optimizar la productividad de sus clientes mediante soluciones personalizadas, asegurando rendimiento, disponibilidad y continuidad operacional.
+            </p>
+            
+            <p>
+              Respaldada por una sólida red de alianzas nacional e internacionales y un enfoque en la mejora continua, Global Parts se posiciona como un referente en el suministro de productos, repuestos y servicios para equipos mineros en Chile, aportando innovación y confianza a cada proyecto.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-accent/30" />
-              
-              {milestones.map((milestone, index) => (
-                <motion.div
-                  key={milestone.year}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`relative mb-16 ${
-                    index % 2 === 0 ? "md:text-right md:pr-8" : "md:text-left md:pl-8"
-                  }`}
-                >
-                  <div
-                    className={`md:w-1/2 ${
-                      index % 2 === 0 ? "md:ml-auto" : ""
-                    }`}
-                  >
-                    <div className="bg-card rounded-lg p-6 shadow-lg hover-lift">
-                      <div className="inline-flex items-center justify-center w-12 h-12 bg-accent/10 rounded-full mb-4">
-                        <Calendar className="w-6 h-6 text-accent" />
-                      </div>
-                      <div className="text-3xl font-heading font-bold text-accent mb-2">
-                        {milestone.year}
-                      </div>
-                      <h3 className="text-xl font-heading font-semibold text-foreground mb-3">
-                        {milestone.title}
-                      </h3>
-                      <p className="text-muted-foreground">
-                        {milestone.description}
-                      </p>
-                    </div>
-                  </div>
-                  
-                  {/* Timeline dot */}
-                  <div className="absolute left-1/2 top-8 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-background" />
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="py-20 bg-accent/5">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      {/* Mission & Vision - Bold Design */}
+      <section className="py-20 bg-gradient-to-br from-accent/10 via-background to-secondary/5 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+            {/* Mission */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="space-y-4"
+              className="relative group"
             >
-              <h2 className="text-3xl font-heading font-bold text-primary">
-                Nuestra Misión
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Proporcionar repuestos mineros de la más alta calidad con velocidad excepcional, 
-                asegurando que cada operación minera en Chile mantenga su continuidad productiva 
-                sin compromisos en calidad ni servicio.
-              </p>
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+              <div className="relative bg-card/80 backdrop-blur-sm rounded-2xl p-8 border border-accent/20 hover:border-accent/40 transition-all duration-300 hover-lift h-full">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-accent to-accent/70 rounded-xl flex items-center justify-center shadow-lg">
+                    <Target className="w-8 h-8 text-white" />
+                  </div>
+                  <h2 className="text-4xl font-heading font-bold text-primary">
+                    Nuestra Misión
+                  </h2>
+                </div>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Impulsar la <span className="text-accent font-semibold">continuidad operacional</span> de la minería chilena entregando repuestos y soluciones técnicas de <span className="text-accent font-semibold">clase mundial</span>, con velocidad excepcional y compromiso inquebrantable. Somos el aliado estratégico que transforma cada desafío en oportunidad, manteniendo las operaciones en movimiento cuando más lo necesitan.
+                </p>
+              </div>
             </motion.div>
             
+            {/* Vision */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-4"
+              className="relative group"
             >
-              <h2 className="text-3xl font-heading font-bold text-primary">
-                Nuestra Visión
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Ser el proveedor preferido de repuestos mineros en Chile y Latinoamérica, 
-                reconocidos por nuestra innovación tecnológica, compromiso con la excelencia 
-                y capacidad de respuesta ante las necesidades más urgentes de nuestros clientes.
-              </p>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+              <div className="relative bg-card/80 backdrop-blur-sm rounded-2xl p-8 border border-primary/20 hover:border-primary/40 transition-all duration-300 hover-lift h-full">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/70 rounded-xl flex items-center justify-center shadow-lg">
+                    <Eye className="w-8 h-8 text-white" />
+                  </div>
+                  <h2 className="text-4xl font-heading font-bold text-primary">
+                    Nuestra Visión
+                  </h2>
+                </div>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Ser el <span className="text-primary font-semibold">referente indiscutido</span> en soluciones mineras de Chile y Latinoamérica. Una organización que redefine estándares, innova constantemente y establece nuevos paradigmas de <span className="text-primary font-semibold">excelencia, velocidad y confiabilidad</span>. Donde cada cliente nos elige no solo por lo que hacemos, sino por cómo transformamos su operación.
+                </p>
+              </div>
             </motion.div>
           </div>
+
+          {/* Values Highlight */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-16 max-w-4xl mx-auto"
+          >
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-primary/20 to-accent/20 rounded-2xl blur-xl" />
+              <div className="relative bg-gradient-to-r from-accent/10 to-primary/10 rounded-2xl p-8 border border-accent/30">
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <Zap className="w-8 h-8 text-accent" />
+                  <h3 className="text-2xl font-heading font-bold text-primary">
+                    Nuestro Compromiso
+                  </h3>
+                </div>
+                <p className="text-center text-lg text-muted-foreground">
+                  Innovación tecnológica, respuesta inmediata y soluciones sostenibles que potencian cada operación. Porque en la minería, <span className="text-accent font-semibold">cada segundo cuenta</span> y la <span className="text-primary font-semibold">excelencia no es negociable</span>.
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
