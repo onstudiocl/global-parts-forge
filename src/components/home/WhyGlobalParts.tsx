@@ -26,7 +26,7 @@ const reasons = [
 
 const WhyGlobalParts = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -35,10 +35,10 @@ const WhyGlobalParts = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-4">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4" style={{ color: '#1a1a1a' }}>
             Por qué Global Parts
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: '#1a1a1a' }}>
             Tu socio estratégico en el suministro de repuestos mineros
           </p>
         </motion.div>
@@ -61,10 +61,10 @@ const WhyGlobalParts = () => {
                 >
                   <reason.icon className="w-8 h-8 text-accent" />
                 </motion.div>
-                <h3 className="text-xl font-heading font-semibold text-foreground">
+                <h3 className="text-xl font-heading font-semibold" style={{ color: '#1a1a1a' }}>
                   {reason.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="leading-relaxed" style={{ color: '#1a1a1a' }}>
                   {reason.description}
                 </p>
               </div>
