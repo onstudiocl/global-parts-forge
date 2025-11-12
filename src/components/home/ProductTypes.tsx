@@ -35,7 +35,7 @@ const products = [
 
 const ProductTypes = () => {
   return (
-    <section className="py-20 bg-secondary">
+    <section className="py-20 bg-transparent">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,10 +44,10 @@ const ProductTypes = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-4">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4" style={{ color: '#1a1a1a' }}>
             Tipos de productos
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: '#1a1a1a' }}>
             Repuestos de calidad para todas las necesidades de tu operación minera
           </p>
         </motion.div>
@@ -63,7 +63,8 @@ const ProductTypes = () => {
               className="group"
             >
               <div 
-                className="bg-card rounded-lg overflow-hidden hover-lift shadow-lg cursor-pointer transition-all duration-300 hover:shadow-accent/20"
+                className="rounded-lg overflow-hidden hover-lift shadow-lg cursor-pointer transition-all duration-300 hover:shadow-accent/20"
+                style={{ backgroundColor: '#fafafa' }}
                 onClick={() => console.log(`Clicked: ${product.title}`)}
               >
                 <div className="relative h-48 overflow-hidden">
@@ -78,12 +79,12 @@ const ProductTypes = () => {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-heading font-semibold mb-4 text-card-foreground">
+                  <h3 className="text-xl font-heading font-semibold mb-4" style={{ color: '#1a1a1a' }}>
                     {product.title}
                   </h3>
                   <ul className="space-y-2">
                     {product.items.map((item) => (
-                      <li key={item} className="text-sm text-muted-foreground flex items-start">
+                      <li key={item} className="text-sm flex items-start" style={{ color: '#1a1a1a' }}>
                         <span className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 mr-2 flex-shrink-0" />
                         {item}
                       </li>
