@@ -33,13 +33,12 @@ const CTASection = () => {
           className="flex items-center justify-center px-8 lg:px-16 py-20 bg-accent/5"
         >
           <div className="max-w-xl space-y-8">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground">
               Mantén tu operación en marcha hoy
             </h2>
             
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-              Cuéntanos qué necesitas y nuestro equipo se pondrá en acción de inmediato. 
-              Sin demoras, sin complicaciones.
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              Cuéntanos qué necesitas y nos pondremos en acción de inmediato. Sin demoras, sin complicaciones.
             </p>
             
             <motion.div
