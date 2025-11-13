@@ -21,7 +21,7 @@ const Hero = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Carousel */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 bg-black">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentImage}
