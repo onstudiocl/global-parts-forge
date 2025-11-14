@@ -19,7 +19,7 @@ import heroServiciosMineria from "@/assets/hero-servicios-mineria.jpg";
 
 const services = [
   {
-    id: "wearParts",
+    id: "miningLighting",
     name: "Iluminación minera",
     icon: Lightbulb,
     image: productParts,
@@ -102,16 +102,25 @@ const services = [
     ],
   },
   {
-    id: "iluminacion",
+    id: "wearItems",
     name: "Elementos de desgaste",
     icon: Laptop,
     image: productMachinery,
-    description: "Sistemas de iluminación industrial diseñados para mejorar la seguridad y productividad en operaciones mineras.",
+    description: "Cuchillas y cantoneras BYG fabricadas a medida o según referencia original. Diseñadas para ofrecer máxima durabilidad y rendimiento en condiciones de alta abrasión o impacto.",
     features: [
-      "Iluminación LED de alto rendimiento",
-      "Luminarias antiexplosivas certificadas",
-      "Sistemas de iluminación para maquinaria",
-      "Torres de iluminación portátiles",
+      "Fabricación a medida o según número de referencia OEM.",
+      "Compatibles con las principales marcas del mercado (Caterpillar, Komatsu, Volvo, Esco y más).",
+      "Disponibles en diferentes calidades de acero: 250 HB, 450 HB y 550 HB.",
+      "Grosores desde 4 mm hasta 160 mm.",
+      "Posibilidad de oxicorte y taladrado a medida.",
+      "Diseño que permite sustituir o girar piezas individualmente para un mayor aprovechamiento del acero."
+    ],
+    advantages: [
+      {
+        id: 1,
+        title: "Mayor resistencia",
+        description: ""
+      }
     ],
     products: [
       {
@@ -177,16 +186,23 @@ const services = [
     ],
   },
   {
-    id: "mantas-termicas",
+    id: "thermalBlankets",
     name: "Mantas térmicas",
     icon: Shield,
     image: productConveyors,
-    description: "Soluciones térmicas especializadas para protección y aislamiento de sistemas críticos en operaciones mineras.",
+    description: "Mantas térmicas MTB diseñadas para proteger equipos y personal en operaciones mineras, reduciendo la exposición a altas temperaturas y disminuyendo significativamente el riesgo de incendios en entornos de alta exigencia térmica.",
     features: [
-      "Aislamiento térmico de alta eficiencia",
-      "Protección para sistemas hidráulicos",
-      "Mantas removibles y reutilizables",
-      "Resistencia a temperaturas extremas",
+      "Fabricación a medida para adaptarse a maquinaria, tuberías y componentes críticos.",
+      "Resistencia térmica hasta 1100 °C, garantizando protección en entornos extremos.",
+      "Instalación técnica por especialistas, sin necesidad de detener la operación minera.",
+      "Impermeables, removibles y reutilizables: ideales para mantenimiento y equipo móvil.",
+    ],
+    advantages: [
+      {
+        id: 1,
+        title: "Mayor resistencia",
+        description: ""
+      }
     ],
     products: [
       {
@@ -252,16 +268,23 @@ const services = [
     ],
   },
   {
-    id: "otros-productos",
-    name: "Otros productos",
+    id: "tires",
+    name: "Neumáticos",
     icon: Package,
     image: productElectronics,
-    description: "Amplia gama de productos complementarios para optimizar todas tus operaciones mineras.",
+    description: "Techking es un fabricante de neumáticos radiales de alto rendimiento para minería y construcción, diseñado para operar en los entornos más exigentes y asegurar disponibilidad.",
     features: [
-      "Componentes eléctricos y electrónicos",
-      "Sistemas de control y automatización",
-      "Herramientas especializadas",
-      "Equipos de seguridad industrial",
+      "Especialización en neumáticos mineros y de construcción Techking se enfoca exclusivamente en neumáticos OTR y TBR, diseñados para rendimiento extremo, tracción y durabilidad en entornos mineros y de obra pesada. ",
+      "Colaboración con fabricantes OEM globales Trabaja con más de 40 fabricantes de equipos originales, garantizando compatibilidad, calidad certificada y desarrollo conjunto de productos adaptados a cada aplicación. ",
+      "Presencia y soporte internacional Opera en más de 160 países con equipos técnicos y de servicio locales, lo que permite respuestas rápidas, asistencia en terreno y soporte postventa especializado. ",
+      "Eficiencia operativa y reducción de costos Su tecnología y diseño orientados al rendimiento permiten mayor vida útil y menor costo por hora (CPH), optimizando la productividad de las flotas en minería y construcción.",
+    ],
+    advantages: [
+      {
+        id: 1,
+        title: "Mayor resistencia",
+        description: ""
+      }
     ],
     products: [
       {
@@ -326,6 +349,91 @@ const services = [
       },
     ],
   },
+  {
+    id: "otherProducts",
+    name: "Otros productos",
+    icon: Package,
+    image: productElectronics,
+    description: "Ofrecemos una amplia gama de repuestos para equipos mineros garantizando rendimiento, durabilidad y disponibilidad operativa. Nuestros productos cumplen con los más altos estándares de calidad para entornos mineros exigentes.",
+    features: [
+      "Bujes",
+      "Repuestos de baldes",
+      "Componentes mayores nuevos y REMAN",
+      "Filtros",
+      "Rodamientos",
+      "Zapatas",
+      "Accesorios varios"
+    ],
+    advantages: [
+      {
+        id: 1,
+        title: "Mayor resistencia",
+        description: ""
+      }
+    ],
+    products: [
+      {
+        id: 1,
+        name: "Sistema de Control",
+        description: "Controlador programable para equipos",
+        image: productElectronics,
+      },
+      {
+        id: 2,
+        name: "Sensores Industriales",
+        description: "Sensores de temperatura y presión",
+        image: productElectronics,
+      },
+      {
+        id: 3,
+        name: "Variador de Frecuencia",
+        description: "Variador para motores eléctricos",
+        image: productElectronics,
+      },
+      // {
+      //   id: 4,
+      //   name: "Kit de Herramientas",
+      //   description: "Set profesional de herramientas",
+      //   image: productElectronics,
+      // },
+      // {
+      //   id: 5,
+      //   name: "Equipo de Seguridad",
+      //   description: "EPP certificado para minería",
+      //   image: productElectronics,
+      // },
+      // {
+      //   id: 6,
+      //   name: "Cables Industriales",
+      //   description: "Cables de potencia certificados",
+      //   image: productElectronics,
+      // },
+      // {
+      //   id: 7,
+      //   name: "Conectores",
+      //   description: "Conectores eléctricos industriales",
+      //   image: productElectronics,
+      // },
+      // {
+      //   id: 8,
+      //   name: "Instrumentación",
+      //   description: "Instrumentos de medición profesionales",
+      //   image: productElectronics,
+      // },
+      // {
+      //   id: 9,
+      //   name: "Filtros",
+      //   description: "Filtros hidráulicos y de aire",
+      //   image: productElectronics,
+      // },
+      // {
+      //   id: 10,
+      //   name: "Lubricantes",
+      //   description: "Lubricantes especializados para minería",
+      //   image: productElectronics,
+      // },
+    ],
+  }
 ];
 
 const Servicios = () => {
@@ -471,7 +579,7 @@ const Servicios = () => {
                 >
                   <CarouselContent>
                     {currentService.products?.map((product) => (
-                      <CarouselItem key={product.id} className="md:basis-1/2 lg:basis-1/4">
+                      <CarouselItem key={product.id} className="md:basis-1/2 lg:basis-1/3">
                         <div className="p-4">
                           <div className="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                             <div className="aspect-square overflow-hidden">
