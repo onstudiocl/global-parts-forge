@@ -60,7 +60,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 text-center text-sm" style={{ borderTop: '1px solid rgba(250, 250, 250, 0.2)', color: '#fafafa', opacity: 0.7 }}>
-          <p>&copy; {new Date().getFullYear()} Global Parts. Todos los derechos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} ON Studio Latam. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

@@ -36,7 +36,7 @@ const WhyGlobalParts = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4" style={{ color: '#1a1a1a' }}>
-            Por qué Global Parts
+            ¿Por qué GP Solutions?
           </h2>
           <p className="text-lg max-w-2xl mx-auto" style={{ color: '#1a1a1a' }}>
             Tu socio estratégico en el suministro de repuestos mineros

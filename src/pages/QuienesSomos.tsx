@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Target, Eye, Zap } from "lucide-react";
@@ -29,7 +31,7 @@ const QuienesSomos = () => {
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-primary mb-6 drop-shadow-lg">
-              Más de 25 años manteniendo la minería chilena en movimiento
+              Más de 25 años manteniendo la <span className="text-accent">minería</span> chilena en movimiento
             </h1>
           </motion.div>
         </div>
@@ -54,19 +56,19 @@ const QuienesSomos = () => {
             className="max-w-5xl mx-auto space-y-6 text-lg leading-relaxed text-muted-foreground"
           >
             <p>
-              <span className="text-2xl font-heading font-bold text-primary">Global Parts SpA</span> es una empresa chilena joven y dinámica, formada por profesionales con más de 25 años de experiencia en la industria minera, comprometidos con brindar soluciones confiables, innovadoras y sostenibles para las principales operaciones mineras del país.
+              <span className="text-2xl font-heading font-bold text-accent">GP Solutions</span> es una empresa chilena joven y dinámica, formada por profesionales con más de 25 años de experiencia en la industria minera, comprometidos con brindar soluciones confiables, innovadoras y sostenibles para las principales operaciones mineras del país.
             </p>
             
             <p>
-              Especializada en la comercialización de repuestos, componentes y servicios técnicos para equipos mineros, Global Parts se consolida como un socio estratégico que entiende de primera mano las necesidades y exigencias del sector. Su equipo ha desarrollado una amplia trayectoria en áreas clave como mantenimiento de equipos, soporte técnico, gestión de proyectos y atención comercial, lo que permite entregar un servicio integral, ágil y de alto valor agregado.
+              Especializada en la comercialización de repuestos, componentes y servicios técnicos para equipos mineros, GP Solutions se consolida como un <span className="text-accent">socio estratégico</span> que entiende de primera mano las necesidades y exigencias del sector. Su equipo ha desarrollado una amplia trayectoria en áreas clave como mantenimiento de equipos, soporte técnico, gestión de proyectos y atención comercial, lo que permite entregar un servicio integral, ágil y de alto valor agregado.
             </p>
             
             <p>
-              Con una visión enfocada en la eficiencia, la tecnología y la sostenibilidad, Global Parts busca optimizar la productividad de sus clientes mediante soluciones personalizadas, asegurando rendimiento, disponibilidad y continuidad operacional.
+              Con una visión enfocada en la <span className="text-accent">eficiencia, la tecnología y la sostenibilidad</span>, GP Solutions busca optimizar la productividad de sus clientes mediante soluciones personalizadas, asegurando rendimiento, disponibilidad y continuidad operacional.
             </p>
             
             <p>
-              Respaldada por una sólida red de alianzas nacional e internacionales y un enfoque en la mejora continua, Global Parts se posiciona como un referente en el suministro de productos, repuestos y servicios para equipos mineros en Chile, aportando innovación y confianza a cada proyecto.
+              Respaldada por una sólida red de alianzas nacional e internacionales y un enfoque en la mejora continua, GP Solutions se posiciona como un referente en el suministro de <span className="text-accent">productos, repuestos y servicios para equipos mineros en Chile</span>, aportando innovación y confianza a cada proyecto.
             </p>
           </motion.div>
         </div>
@@ -149,6 +151,11 @@ const QuienesSomos = () => {
                 <p className="text-center text-lg text-muted-foreground">
                   Innovación tecnológica, respuesta inmediata y soluciones sostenibles que potencian cada operación. Porque en la minería, <span className="text-accent font-semibold">cada segundo cuenta</span> y la <span className="text-primary font-semibold">excelencia no es negociable</span>.
                 </p>
+                <Button variant="cta" size="lg" asChild className="text-lg px-8 py-4 h-auto relative left-1/2 -translate-x-1/2 mt-10">
+                  <Link to="/contacto" className="inline-flex items-center gap-2">
+                    Contáctanos ahora
+                  </Link>
+                </Button>
               </div>
             </div>
           </motion.div>
