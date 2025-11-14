@@ -13,7 +13,7 @@ const Stats = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.6, 1, 0.6]);
 
   return (
-    <section ref={sectionRef} className="py-32 bg-[url('/src/assets/stats_background.jpg')] text-white overflow-hidden">
+    <section ref={sectionRef} className="py-32 bg-[url('/src/assets/stats_background.jpg')] bg-cover text-white overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="space-y-12">
           <motion.div
