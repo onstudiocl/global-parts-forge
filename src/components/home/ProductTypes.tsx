@@ -1,36 +1,48 @@
 import { motion } from "framer-motion";
 import { Package, Truck, Zap, Cog } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import productParts from "@/assets/product-parts.jpg";
-import productMachinery from "@/assets/product-machinery.jpg";
-import productConveyors from "@/assets/product-conveyors.jpg";
-import productElectronics from "@/assets/product-electronics.jpg";
+import miningLighting from "@/assets/productTypes_Card1.jpg";
+import wearParts from "@/assets/productTypes_Card2.jpg";
+import thermalBlankets from "@/assets/productTypes_Card3.jpg";
+import miningTires from "@/assets/productTypes_Card4.jpg";
+import otherProducts from "@/assets/productTypes_Card5.jpg";
 
 const products = [
   {
-    title: "Repuestos Generales",
-    image: productParts,
-    icon: Package,
-    items: ["Rodamientos", "Sellos", "Filtros", "Correas"],
+    title: "Iluminación Minera",
+    image: miningLighting,
+    description: "Iluminación para palas, cargadores, equipos auxiliares, plantas y bodegas"
+    // icon: Package,
+    // items: ["Rodamientos", "Sellos", "Filtros", "Correas"],
   },
   {
-    title: "Maquinaria Pesada",
-    image: productMachinery,
-    icon: Truck,
-    items: ["Motores", "Sistemas hidráulicos", "Transmisiones", "Frenos"],
+    title: "Elementos de  desgaste",
+    image: wearParts,
+    description: "Cuchillas, martillos, punteros y cadenas"
+    // icon: Truck
+    // items: ["Motores", "Sistemas hidráulicos", "Transmisiones", "Frenos"],
   },
   {
-    title: "Sistemas de Transporte",
-    image: productConveyors,
-    icon: Cog,
-    items: ["Correas transportadoras", "Rodillos", "Poleas", "Raspadores"],
+    title: "Mantas térmicas",
+    image: thermalBlankets,
+    description: "Soluciones de prevención de incendio para motores de combustión"
+    // icon: Cog,
+    // items: ["Correas transportadoras", "Rodillos", "Poleas", "Raspadores"],
   },
   {
-    title: "Componentes Eléctricos",
-    image: productElectronics,
-    icon: Zap,
-    items: ["Sensores", "Controladores", "Cables", "Conectores"],
+    title: "Neumáticos mineros",
+    image: miningTires,
+    description: "Soluciones y servicios de neumáticos personalizados a más de 40 reconocidos fabricantes de equipos y gigantes mineros"
+    // icon: Zap,
+    // items: ["Sensores", "Controladores", "Cables", "Conectores"],
   },
+  {
+    title: "Otros productos",
+    image: otherProducts,
+    description: "Repuestos para palas y cargadores, filtros, rodamientos, zapatas, soportes de tonelaje y accesorios varios"
+    // icon: Zap,
+    // items: ["Sensores", "Controladores", "Cables", "Conectores"],
+  }
 ];
 
 const ProductTypes = () => {
@@ -52,7 +64,7 @@ const ProductTypes = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {products.map((product, index) => (
             <motion.div
               key={product.title}
@@ -71,25 +83,26 @@ const ProductTypes = () => {
                   <img
                     src={product.image}
                     alt={product.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-500 lg:group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <div className="absolute bottom-4 left-4">
-                    <product.icon className="w-8 h-8 text-white" />
+                    {/* <product.icon className="w-8 h-8 text-white" /> */}
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-heading font-semibold mb-4" style={{ color: '#1a1a1a' }}>
+                  <h3 className="text-lg lg:text-sm font-heading font-semibold mb-4" style={{ color: '#1a1a1a' }}>
                     {product.title}
                   </h3>
-                  <ul className="space-y-2">
-                    {product.items.map((item) => (
+                  <div className="space-y-2 text-zinc-900 h-20 lg:mb-4 lg:text-sm">
+                    {product.description}
+                    {/* {product.items.map((item) => (
                       <li key={item} className="text-sm flex items-start" style={{ color: '#1a1a1a' }}>
                         <span className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 mr-2 flex-shrink-0" />
                         {item}
                       </li>
-                    ))}
-                  </ul>
+                    ))} */}
+                  </div>
                 </div>
               </div>
             </motion.div>

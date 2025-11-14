@@ -11,10 +11,10 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Settings, Lightbulb, Shield, Package } from "lucide-react";
-import productParts from "@/assets/product-parts.jpg";
-import productMachinery from "@/assets/product-machinery.jpg";
-import productConveyors from "@/assets/product-conveyors.jpg";
-import productElectronics from "@/assets/product-electronics.jpg";
+import productParts from "@/assets/productTypes_Card1.jpg";
+import productMachinery from "@/assets/productTypes_Card2.jpg";
+import productConveyors from "@/assets/productTypes_Card3.jpg";
+import productElectronics from "@/assets/productTypes_Card4.jpg";
 import heroServiciosMineria from "@/assets/hero-servicios-mineria.jpg";
 
 const services = [
