@@ -25,19 +25,19 @@ const Footer = () => {
             <div className="space-y-3 text-sm" style={{ color: '#fafafa', opacity: 0.9 }}>
               <div className="flex items-start space-x-3">
                 <Mail className="w-4 h-4 mt-1 flex-shrink-0" />
-                <a href="mailto:contacto@globalparts.cl" className="hover:text-accent transition-colors">
-                  contacto@globalparts.cl
+                <a href="mailto:msv@globalpartsspa.com" className="hover:text-accent transition-colors">
+                  msv@globalpartsspa.com
                 </a>
               </div>
               <div className="flex items-start space-x-3">
                 <Phone className="w-4 h-4 mt-1 flex-shrink-0" />
-                <a href="tel:+56912345678" className="hover:text-accent transition-colors">
-                  +56 9 1234 5678
+                <a href="tel:+56934087045" className="hover:text-accent transition-colors">
+                  +56 9 3408 7045
                 </a>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>Santiago, Chile</span>
+                <span>Antofagasta, Cerro Moreno</span>
               </div>
             </div>
           </div>

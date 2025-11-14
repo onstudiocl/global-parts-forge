@@ -43,7 +43,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Button variant="cta" size="default" asChild>
-              <Link to="/contacto">Conversemos</Link>
+              <Link to="https://wa.me/+56934087045">Conversemos</Link>
             </Button>
           </div>
 

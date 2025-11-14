@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Hash, Mail, Phone, MapPin, Clock } from "lucide-react";
 
 const Contacto = () => {
   return (
@@ -18,10 +18,13 @@ const Contacto = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="space-y-6"
-            >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary">
-                Conversemos
-              </h1>
+            >  
+              <div className="flex items-center">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary">
+                  Conversemos&nbsp;
+                </h1>
+                <Hash className="size-9 text-accent stroke-[5px] mt-3" />
+              </div>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 Nuestro equipo está listo para ayudarte. Contáctanos ahora y mantengamos 
                 tu operación en marcha.
@@ -52,25 +55,25 @@ const Contacto = () => {
                 {
                   icon: Mail,
                   title: "Email",
-                  info: "contacto@globalparts.cl",
-                  link: "mailto:contacto@globalparts.cl",
+                  info: "msv@globalpartsspa.com",
+                  link: "msv@globalpartsspa.com",
                 },
                 {
                   icon: Phone,
                   title: "Teléfono",
-                  info: "+56 9 1234 5678",
-                  link: "tel:+56912345678",
+                  info: "+56 9 3408 7045",
+                  link: "tel:+56934087045",
                 },
                 {
                   icon: MapPin,
                   title: "Ubicación",
-                  info: "Santiago, Chile",
+                  info: "Antofagasta, Cerro Moreno",
                   link: null,
                 },
                 {
                   icon: Clock,
                   title: "Horario",
-                  info: "Lun - Vie: 8:00 - 18:00",
+                  info: "24 hrs, 7 días a la semana",
                   link: null,
                 },
               ].map((item, index) => (
