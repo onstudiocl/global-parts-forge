@@ -53,7 +53,7 @@ const WhyGlobalParts = () => {
               transition={{ duration: 0.4, delay: index * 0.1 }}
               className="group"
             >
-              <div className="text-center space-y-4 p-6 rounded-lg hover:bg-secondary/50 transition-colors duration-300">
+              <div className="text-center space-y-4 p-6 rounded-2xl hover:bg-orange-200/70 transition-colors duration-300">
                 <motion.div
                   whileHover={{ rotate: 10, scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 300, damping: 10 }}
