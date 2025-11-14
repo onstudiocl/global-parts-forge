@@ -33,11 +33,11 @@ const CTASection = () => {
           className="flex items-center justify-center px-8 lg:px-16 py-20 bg-accent/5"
         >
           <div className="max-w-xl space-y-8">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-zinc-600">
               Mantén tu operación en marcha hoy
             </h2>
             
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+            <p className="text-xl md:text-2xl text-zinc-600 leading-relaxed">
               Cuéntanos qué necesitas y nuestro equipo se pondrá en acción de inmediato. 
               Sin demoras, sin complicaciones.
             </p>

@@ -4,7 +4,7 @@ import footerBackground from "@/assets/footer-background.png";
 const Footer = () => {
   return (
     <footer 
-      className="py-12 mt-20 bg-cover bg-center relative"
+      className="py-12 bg-cover bg-center relative"
       style={{ backgroundImage: `url(${footerBackground})` }}
     >
       <div className="absolute inset-0 bg-black/50" />

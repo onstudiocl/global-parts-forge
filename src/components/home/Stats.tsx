@@ -8,8 +8,8 @@ const Stats = () => {
     offset: ["start end", "end start"],
   });
 
-  const leftX = useTransform(scrollYProgress, [0, 1], ["-0%", "10%"]);
-  const rightX = useTransform(scrollYProgress, [0, 1], ["3%", "-1%"]);
+  const leftX = useTransform(scrollYProgress, [0, 1], ["10%", "15%"]);
+  const rightX = useTransform(scrollYProgress, [0, 1], ["7%", "-1%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.6, 1, 0.6]);
 
   return (
@@ -27,10 +27,13 @@ const Stats = () => {
           
           <motion.div
             style={{ x: rightX, opacity }}
-            className="text-center md:text-right"
+            className="text-center"
           >
             <p className="text-2xl md:text-3xl lg:text-4xl font-body leading-relaxed text-white">
-              ...y una cartera creciente de clientes que avalan nuestro compromiso, rapidez y resultados.
+              ...y una cartera creciente de clientes que avalan nuestro
+            </p>
+            <p className="text-2xl md:text-3xl lg:text-4xl font-body leading-relaxed text-white">
+               compromiso, rapidez y resultados.
             </p>
           </motion.div>
         </div>
