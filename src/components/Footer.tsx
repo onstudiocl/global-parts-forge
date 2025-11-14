@@ -1,5 +1,6 @@
 import { Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import footerBackground from "@/assets/footer-background.png";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -12,9 +13,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in-up">
           {/* Logo & Description */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-heading font-bold" style={{ color: '#fafafa' }}>Global Parts</h3>
+            <img src={logo} alt="Logo GP Solutions" className="w-[320px]" />
             <p className="text-sm" style={{ color: '#fafafa', opacity: 0.9 }}>
-              Proveedor líder de repuestos mineros en Chile. Manteniendo tu operación en marcha desde 1998.
+              Proveedor líder de repuestos mineros en Chile.
             </p>
           </div>
 
