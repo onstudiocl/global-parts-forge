@@ -10,7 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Settings, Lightbulb, Shield, Package } from "lucide-react";
+import { Lightbulb, Laptop, Shield, Package } from "lucide-react";
 import productParts from "@/assets/productTypes_Card1.jpg";
 import productMachinery from "@/assets/productTypes_Card2.jpg";
 import productConveyors from "@/assets/productTypes_Card3.jpg";
@@ -19,16 +19,24 @@ import heroServiciosMineria from "@/assets/hero-servicios-mineria.jpg";
 
 const services = [
   {
-    id: "elementos-desgaste",
-    name: "Elementos de desgaste",
-    icon: Settings,
+    id: "wearParts",
+    name: "Iluminación minera",
+    icon: Lightbulb,
     image: productParts,
-    description: "Componentes de alta resistencia diseñados para soportar las condiciones más exigentes de la minería.",
+    description: "Sistemas de iluminación LED Phoenix diseñados para operar en los entornos mineros más exigentes, garantizando seguridad, productividad y eficiencia energética en equipos e infraestructuras.",
     features: [
-      "Revestimientos y blindajes de acero",
-      "Piezas de desgaste para chancadores",
-      "Martillos y placas de impacto",
-      "Cuchillas y dientes de excavadoras",
+      "Tecnología LED de alta potencia para uso en minería subterránea y a cielo abierto.",
+      "Iluminación resistente a vibraciones, polvo, humedad y temperaturas extremas y con opciones AC y DC.",
+      "Diseños específicos para maquinaria móvil, plantas de procesamiento y zonas de carga.",
+      "Ópticas que reducen el deslumbramiento y mejoran la visibilidad del operador.",
+      "Luminarias con certificación para ubicaciones peligrosas y entornos explosivos."
+    ],
+    advantages: [
+      {
+        id: 1,
+        title: "Mayor resistencia",
+        description: ""
+      }
     ],
     products: [
       {
@@ -95,8 +103,8 @@ const services = [
   },
   {
     id: "iluminacion",
-    name: "Iluminación",
-    icon: Lightbulb,
+    name: "Elementos de desgaste",
+    icon: Laptop,
     image: productMachinery,
     description: "Sistemas de iluminación industrial diseñados para mejorar la seguridad y productividad en operaciones mineras.",
     features: [
@@ -346,8 +354,11 @@ const Servicios = () => {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white drop-shadow-lg">
+              Nuestros servicios
+            </h1>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-8 drop-shadow-lg">
-              Nuestros servicios y productos
+              <span className="text-accent">&</span> productos
             </h1>
             <p className="text-2xl text-white/90 drop-shadow-md">
               Soluciones integrales en repuestos mineros de las mejores marcas internacionales
