@@ -1,0 +1,806 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\WINDOWS\system32> cd "D:\OneDrive\Desktop\Global Parts Web"
+PS D:\OneDrive\Desktop\Global Parts Web> cd .\global-parts-forge\
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git branch
+* dev
+  main
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git pull origin main
+From https://github.com/onstudiocl/global-parts-forge
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git commit -m "Modifying button styles"
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   package-lock.json
+        modified:   package.json
+        modified:   src/components/ui/button.tsx
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git add .
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git commit -m "Modifying button styles"
+[dev e5717c3] Modifying button styles
+ 3 files changed, 479 insertions(+), 801 deletions(-)
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git add .
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git commit -m "Modifying the Product Types section of the Home view"
+[dev b5afbee] Modifying the Product Types section of the Home view
+ 11 files changed, 45 insertions(+), 32 deletions(-)
+ delete mode 100644 src/assets/product-conveyors.jpg
+ delete mode 100644 src/assets/product-electronics.jpg
+ delete mode 100644 src/assets/product-machinery.jpg
+ delete mode 100644 src/assets/product-parts.jpg
+ create mode 100644 src/assets/productTypes_Card1.jpg
+ create mode 100644 src/assets/productTypes_Card2.jpg
+ create mode 100644 src/assets/productTypes_Card3.jpg
+ create mode 100644 src/assets/productTypes_Card4.jpg
+ create mode 100644 src/assets/productTypes_Card5.jpg
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git push origin dev
+Enumerating objects: 34, done.
+Counting objects: 100% (34/34), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (22/22), done.
+Writing objects: 100% (22/22), 803.46 KiB | 24.35 MiB/s, done.
+Total 22 (delta 15), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (15/15), completed with 12 local objects.
+To https://github.com/onstudiocl/global-parts-forge.git
+   e91aabc..b5afbee  dev -> dev
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git merge dev
+Updating e91aabc..b5afbee
+Fast-forward
+ package-lock.json                    | 1270 +++++++++++++---------------------
+ package.json                         |    2 +-
+ src/assets/product-conveyors.jpg     |  Bin 177379 -> 0 bytes
+ src/assets/product-electronics.jpg   |  Bin 122353 -> 0 bytes
+ src/assets/product-machinery.jpg     |  Bin 101419 -> 0 bytes
+ src/assets/product-parts.jpg         |  Bin 154104 -> 0 bytes
+ src/assets/productTypes_Card1.jpg    |  Bin 0 -> 137919 bytes
+ src/assets/productTypes_Card2.jpg    |  Bin 0 -> 241843 bytes
+ src/assets/productTypes_Card3.jpg    |  Bin 0 -> 150581 bytes
+ src/assets/productTypes_Card4.jpg    |  Bin 0 -> 136656 bytes
+ src/assets/productTypes_Card5.jpg    |  Bin 0 -> 168163 bytes
+ src/components/home/ProductTypes.tsx |   69 +-
+ src/components/ui/button.tsx         |    8 +-
+ src/pages/Servicios.tsx              |    8 +-
+ 14 files changed, 524 insertions(+), 833 deletions(-)
+ delete mode 100644 src/assets/product-conveyors.jpg
+ delete mode 100644 src/assets/product-electronics.jpg
+ delete mode 100644 src/assets/product-machinery.jpg
+ delete mode 100644 src/assets/product-parts.jpg
+ create mode 100644 src/assets/productTypes_Card1.jpg
+ create mode 100644 src/assets/productTypes_Card2.jpg
+ create mode 100644 src/assets/productTypes_Card3.jpg
+ create mode 100644 src/assets/productTypes_Card4.jpg
+ create mode 100644 src/assets/productTypes_Card5.jpg
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/onstudiocl/global-parts-forge.git
+   e91aabc..b5afbee  main -> main
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> npm run build
+
+> vite_react_shadcn_ts@0.0.0 build
+> vite build
+
+vite v7.2.2 building client environment for production...
+✓ 2082 modules transformed.
+dist/index.html                                         1.68 kB │ gzip:   0.72 kB
+dist/assets/logo-global-parts-watermark-C4ZAKhQb.png   23.37 kB
+dist/assets/background-gradient-mSv4waXB.jpg           47.15 kB
+dist/assets/productTypes_Card4-wY2E4-bb.jpg           136.66 kB
+dist/assets/productTypes_Card1-v76Uus-G.jpg           137.92 kB
+dist/assets/productTypes_Card3-BGHr0jgb.jpg           150.58 kB
+dist/assets/hero-sobre-nosotros-B-rsiQvi.jpg          154.07 kB
+dist/assets/footer-background-C4UkZtkM.png            155.89 kB
+dist/assets/productTypes_Card5-DxdE-Q31.jpg           168.16 kB
+dist/assets/hero-mining-2-DUlUPAmq.jpg                171.45 kB
+dist/assets/hero-mining-1-CAdKvAgk.jpg                215.85 kB
+dist/assets/hero-mining-3-Chv0ammV.jpg                216.25 kB
+dist/assets/productTypes_Card2-Ce3YMx5v.jpg           241.84 kB
+dist/assets/cta-mining-efficiency-B-OEos9j.jpg        247.50 kB
+dist/assets/hero-servicios-mineria-C43A_tB6.jpg       260.92 kB
+dist/assets/index-D51Wrjr6.css                         73.48 kB │ gzip:  12.25 kB
+dist/assets/index-ExBMsyrF.js                         489.34 kB │ gzip: 159.42 kB
+✓ built in 9.83s
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> firebase deploy
+
+Error: Not in a Firebase app directory (could not locate firebase.json)
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> firebase init
+
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\OneDrive\Desktop\Global Parts Web\global-parts-forge
+
+√ Are you ready to proceed? Yes
+√ Which Firebase features do you want to set up for this directory? Press Space to select features, then Enter to confirm your choices. Hosting: Set up deployments
+for static web apps
+
+=== Project Setup
+
+First, let's associate this project directory with a Firebase project.
+You can create multiple project aliases by running firebase use --add,
+
+i  Using project global-parts-mining (Global Parts Mining) .
+
+=== Hosting Setup
+
+Your public directory is the folder (relative to your project directory) that
+will contain Hosting assets to be uploaded with firebase deploy. If you
+have a build process for your assets, use your build's output directory.
+
+√ What do you want to use as your public directory? dist
+√ Configure as a single-page app (rewrite all urls to /index.html)? Yes
+√ Set up automatic builds and deploys with GitHub? No
+√ File dist/index.html already exists. Overwrite? No
+i  Skipping write of dist/index.html
+
++  Wrote configuration info to firebase.json
++  Wrote project information to .firebaserc
+
++  Firebase initialization complete!
+
+   ╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+   │                                                                                                                     │
+   │                                         Update available 14.24.2 → 14.25.0                                          │
+   │                                   To update to the latest version using npm, run                                    │
+   │                                            npm install -g firebase-tools                                            │
+   │   For other CLI management options, visit the CLI documentation (https://firebase.google.com/docs/cli#update-cli)   │
+   │                                                                                                                     │
+   │                                                                                                                     │
+   │                                                                                                                     │
+   ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> firebase deploy
+
+=== Deploying to 'global-parts-mining'...
+
+i  deploying hosting
+i  hosting[global-parts-mining]: beginning deploy...
+i  hosting[global-parts-mining]: found 20 files in dist
++  hosting[global-parts-mining]: file upload complete
+i  hosting[global-parts-mining]: finalizing version...
++  hosting[global-parts-mining]: version finalized
+i  hosting[global-parts-mining]: releasing new version...
++  hosting[global-parts-mining]: release complete
+
++  Deploy complete!
+
+Project Console: https://console.firebase.google.com/project/global-parts-mining/overview
+Hosting URL: https://global-parts-mining.web.app
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> npm i -g firebase-tools
+npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+
+changed 752 packages in 58s
+
+81 packages are looking for funding
+  run `npm fund` for details
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> npm fund
+vite_react_shadcn_ts@0.0.0
++-- https://github.com/sponsors/tannerlinsley
+|   `-- @tanstack/react-query@5.83.0, @tanstack/query-core@5.83.0
++-- https://polar.sh/cva
+|   `-- class-variance-authority@0.7.1
++-- https://github.com/sponsors/kossnocorp
+|   `-- date-fns@3.6.0
++-- https://github.com/sponsors/gpbl
+|   `-- react-day-picker@8.10.1
++-- https://opencollective.com/react-hook-form
+|   `-- react-hook-form@7.61.1
++-- https://github.com/sponsors/dcastil
+|   `-- tailwind-merge@2.6.0
++-- https://github.com/sponsors/colinhacks
+|   `-- zod@3.25.76
++-- https://eslint.org/donate
+|   `-- @eslint/js@9.32.0, eslint@9.32.0
++-- https://opencollective.com/postcss/
+| | `-- autoprefixer@10.4.21, postcss@8.5.6, postcss-js@4.0.1, postcss-load-config@4.0.2, postcss-nested@6.2.0
+| +-- https://opencollective.com/browserslist
+| |   `-- browserslist@4.25.1, update-browserslist-db@1.1.3, caniuse-lite@1.0.30001727
+| `-- https://github.com/sponsors/rawify
+|     `-- fraction.js@4.3.7
++-- https://opencollective.com/typescript-eslint
+|   `-- typescript-eslint@8.38.0, @typescript-eslint/eslint-plugin@8.38.0, @typescript-eslint/scope-manager@8.38.0, @typescript-eslint/types@8.38.0, @typescript-eslint/type-utils@8.38.0, @typescript-eslint/visitor-keys@8.38.0, @typescript-eslint/parser@8.38.0, @typescript-eslint/typescript-estree@8.38.0, @typescript-eslint/project-service@8.38.0, @typescript-eslint/tsconfig-utils@8.38.0, @typescript-eslint/utils@8.38.0
++-- https://github.com/vitejs/vite?sponsor=1
+| | `-- vite@7.2.2
+| +-- https://github.com/sponsors/jonschlinkert
+| |   `-- picomatch@4.0.3, picomatch@2.3.1
+| `-- https://github.com/sponsors/SuperchupuDev
+|     `-- tinyglobby@0.2.15
++-- https://opencollective.com/swc
+|   `-- @swc/core@1.13.2
++-- https://paulmillr.com/funding/
+|   `-- chokidar@3.6.0
++-- https://github.com/sponsors/antonk52
+|   `-- lilconfig@3.1.3
++-- https://github.com/sponsors/ljharb
+|   `-- resolve@1.22.8, is-core-module@2.15.1, function-bind@1.1.2, supports-preserve-symlinks-flag@1.0.0
++-- https://github.com/sponsors/feross
+|   `-- run-parallel@1.2.0, queue-microtask@1.2.3
+`-- https://github.com/sponsors/isaacs
+    `-- glob@10.4.5, foreground-child@3.3.0, signal-exit@4.1.0, jackspeak@3.4.3, minimatch@9.0.5, path-scurry@1.11.1
+
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git add .
+warning: in the working copy of '.firebase/hosting.ZGlzdA.cache', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.firebaserc', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'firebase.json', LF will be replaced by CRLF the next time Git touches it
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git commit -m "Modifying the Hero section of the Home view"
+[main 1eeb69f] Modifying the Hero section of the Home view
+ 7 files changed, 42 insertions(+), 1 deletion(-)
+ create mode 100644 .firebase/hosting.ZGlzdA.cache
+ create mode 100644 .firebaserc
+ create mode 100644 firebase.json
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git branch
+  dev
+* main
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git push origin main
+Enumerating objects: 23, done.
+Counting objects: 100% (23/23), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (14/14), 5.82 MiB | 2.24 MiB/s, done.
+Total 14 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+To https://github.com/onstudiocl/global-parts-forge.git
+   b5afbee..1eeb69f  main -> main
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git checkout dev
+Deletion of directory '.firebase' failed. Should I try again? (y/n) n
+Updating files: 100% (7/7), done.
+Switched to branch 'dev'
+Your branch is up to date with 'origin/dev'.
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git pull origin main
+From https://github.com/onstudiocl/global-parts-forge
+ * branch            main       -> FETCH_HEAD
+Updating b5afbee..1eeb69f
+Fast-forward
+ .firebase/hosting.ZGlzdA.cache |  20 ++++++++++++++++++++
+ .firebaserc                    |   5 +++++
+ firebase.json                  |  16 ++++++++++++++++
+ src/assets/hero-mining-1.jpg   | Bin 215848 -> 1782345 bytes
+ src/assets/hero-mining-2.jpg   | Bin 171445 -> 1865450 bytes
+ src/assets/hero-mining-3.jpg   | Bin 216248 -> 2519022 bytes
+ src/components/home/Hero.tsx   |   2 +-
+ 7 files changed, 42 insertions(+), 1 deletion(-)
+ create mode 100644 .firebase/hosting.ZGlzdA.cache
+ create mode 100644 .firebaserc
+ create mode 100644 firebase.json
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git push origin dev
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/onstudiocl/global-parts-forge.git
+   b5afbee..1eeb69f  dev -> dev
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git add .
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git commit -m "Adding a logo to the Navbar component"
+[dev 7da2497] Adding a logo to the Navbar component
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+ create mode 100644 src/assets/logo.png
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git push origin dev
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 46.33 KiB | 15.44 MiB/s, done.
+Total 7 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To https://github.com/onstudiocl/global-parts-forge.git
+   1eeb69f..7da2497  dev -> dev
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git merge dev
+Updating 1eeb69f..7da2497
+Fast-forward
+ src/assets/logo.png       | Bin 0 -> 47485 bytes
+ src/components/Navbar.tsx |   4 +++-
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+ create mode 100644 src/assets/logo.png
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/onstudiocl/global-parts-forge.git
+   1eeb69f..7da2497  main -> main
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> npm run build
+
+> vite_react_shadcn_ts@0.0.0 build
+> vite build
+
+vite v7.2.2 building client environment for production...
+✓ 2083 modules transformed.
+dist/index.html                                           1.68 kB │ gzip:   0.73 kB
+dist/assets/logo-global-parts-watermark-C4ZAKhQb.png     23.37 kB
+dist/assets/background-gradient-mSv4waXB.jpg             47.15 kB
+dist/assets/logo-BArnQ5b8.png                            47.49 kB
+dist/assets/productTypes_Card4-wY2E4-bb.jpg             136.66 kB
+dist/assets/productTypes_Card1-v76Uus-G.jpg             137.92 kB
+dist/assets/productTypes_Card3-BGHr0jgb.jpg             150.58 kB
+dist/assets/hero-sobre-nosotros-B-rsiQvi.jpg            154.07 kB
+dist/assets/footer-background-C4UkZtkM.png              155.89 kB
+dist/assets/productTypes_Card5-DxdE-Q31.jpg             168.16 kB
+dist/assets/productTypes_Card2-Ce3YMx5v.jpg             241.84 kB
+dist/assets/cta-mining-efficiency-B-OEos9j.jpg          247.50 kB
+dist/assets/hero-servicios-mineria-C43A_tB6.jpg         260.92 kB
+dist/assets/hero-mining-1-BcRG-nF8.jpg                1,782.35 kB
+dist/assets/hero-mining-2-CKlN2c5i.jpg                1,865.45 kB
+dist/assets/hero-mining-3-Dzpbgwna.jpg                2,519.02 kB
+dist/assets/index-DESfYguo.css                           73.51 kB │ gzip:  12.25 kB
+dist/assets/index-BpKBdxxg.js                           489.34 kB │ gzip: 159.48 kB
+✓ built in 4.88s
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> firebase deploy
+
+=== Deploying to 'global-parts-mining'...
+
+i  deploying hosting
+i  hosting[global-parts-mining]: beginning deploy...
+i  hosting[global-parts-mining]: found 21 files in dist
++  hosting[global-parts-mining]: file upload complete
+i  hosting[global-parts-mining]: finalizing version...
++  hosting[global-parts-mining]: version finalized
+i  hosting[global-parts-mining]: releasing new version...
++  hosting[global-parts-mining]: release complete
+
++  Deploy complete!
+
+Project Console: https://console.firebase.google.com/project/global-parts-mining/overview
+Hosting URL: https://global-parts-mining.web.app
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git checkout dev
+M       .firebase/hosting.ZGlzdA.cache
+Switched to branch 'dev'
+Your branch is up to date with 'origin/dev'.
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git branch
+* dev
+  main
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git add .
+warning: in the working copy of '.firebase/hosting.ZGlzdA.cache', LF will be replaced by CRLF the next time Git touches it
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git commit -m "Changing the hover effect color for the Why GlobalParts section of the Home view"
+[dev 265833b] Changing the hover effect color for the Why GlobalParts section of the Home view
+ 2 files changed, 20 insertions(+), 19 deletions(-)
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git push origin dev
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 1.23 KiB | 1.23 MiB/s, done.
+Total 8 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+To https://github.com/onstudiocl/global-parts-forge.git
+   7da2497..265833b  dev -> dev
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git add .
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git commit -m "Adding a background image and changing the text color of the Stats section in the Home view"
+[dev baf5ee1] Adding a background image and changing the text color of the Stats section in the Home view
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+ create mode 100644 src/assets/stats_background.jpg
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git add .
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git commit -m "Changing the image in the CTA section, changing the font color of the title, removing the top margin from the Footer, and rearranging the elements in the Stats section"
+[dev 1d52c8f] Changing the image in the CTA section, changing the font color of the title, removing the top margin from the Footer, and rearranging the elements in the Stats section
+ 4 files changed, 10 insertions(+), 7 deletions(-)
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git push origin dev
+Enumerating objects: 27, done.
+Counting objects: 100% (27/27), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (18/18), 136.71 KiB | 19.53 MiB/s, done.
+Total 18 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 8 local objects.
+To https://github.com/onstudiocl/global-parts-forge.git
+   265833b..1d52c8f  dev -> dev
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git merge dev
+Updating 7da2497..1d52c8f
+Fast-forward
+ .firebase/hosting.ZGlzdA.cache         |  37 +++++++++++++++++----------------
+ src/assets/cta-mining-efficiency.jpg   | Bin 247499 -> 105371 bytes
+ src/assets/stats_background.jpg        | Bin 0 -> 49270 bytes
+ src/components/Footer.tsx              |   2 +-
+ src/components/home/CTASection.tsx     |   4 ++--
+ src/components/home/Stats.tsx          |  17 ++++++++-------
+ src/components/home/WhyGlobalParts.tsx |   2 +-
+ 7 files changed, 33 insertions(+), 29 deletions(-)
+ create mode 100644 src/assets/stats_background.jpg
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/onstudiocl/global-parts-forge.git
+   7da2497..1d52c8f  main -> main
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> npm run build
+
+> vite_react_shadcn_ts@0.0.0 build
+> vite build
+
+vite v7.2.2 building client environment for production...
+✓ 2083 modules transformed.
+dist/index.html                                           1.68 kB │ gzip:   0.73 kB
+dist/assets/logo-global-parts-watermark-C4ZAKhQb.png     23.37 kB
+dist/assets/background-gradient-mSv4waXB.jpg             47.15 kB
+dist/assets/logo-BArnQ5b8.png                            47.49 kB
+dist/assets/stats_background-C_TfMXJA.jpg                49.27 kB
+dist/assets/cta-mining-efficiency-DcG_EeLJ.jpg          105.37 kB
+dist/assets/productTypes_Card4-wY2E4-bb.jpg             136.66 kB
+dist/assets/productTypes_Card1-v76Uus-G.jpg             137.92 kB
+dist/assets/productTypes_Card3-BGHr0jgb.jpg             150.58 kB
+dist/assets/hero-sobre-nosotros-B-rsiQvi.jpg            154.07 kB
+dist/assets/footer-background-C4UkZtkM.png              155.89 kB
+dist/assets/productTypes_Card5-DxdE-Q31.jpg             168.16 kB
+dist/assets/productTypes_Card2-Ce3YMx5v.jpg             241.84 kB
+dist/assets/hero-servicios-mineria-C43A_tB6.jpg         260.92 kB
+dist/assets/hero-mining-1-BcRG-nF8.jpg                1,782.35 kB
+dist/assets/hero-mining-2-CKlN2c5i.jpg                1,865.45 kB
+dist/assets/hero-mining-3-Dzpbgwna.jpg                2,519.02 kB
+dist/assets/index-D9RAoFf6.css                           73.71 kB │ gzip:  12.34 kB
+dist/assets/index-DH-Pva_j.js                           489.42 kB │ gzip: 159.52 kB
+✓ built in 4.87s
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> firebase deploy
+
+=== Deploying to 'global-parts-mining'...
+
+i  deploying hosting
+i  hosting[global-parts-mining]: beginning deploy...
+i  hosting[global-parts-mining]: found 22 files in dist
++  hosting[global-parts-mining]: file upload complete
+i  hosting[global-parts-mining]: finalizing version...
++  hosting[global-parts-mining]: version finalized
+i  hosting[global-parts-mining]: releasing new version...
++  hosting[global-parts-mining]: release complete
+
++  Deploy complete!
+
+Project Console: https://console.firebase.google.com/project/global-parts-mining/overview
+Hosting URL: https://global-parts-mining.web.app
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git checkout dev
+M       .firebase/hosting.ZGlzdA.cache
+Switched to branch 'dev'
+Your branch is up to date with 'origin/dev'.
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git add .
+warning: in the working copy of '.firebase/hosting.ZGlzdA.cache', LF will be replaced by CRLF the next time Git touches it
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git commit -m "Adding bg-cover to the background image of the Stats section"
+[dev dc2a29a] Adding bg-cover to the background image of the Stats section
+ 2 files changed, 20 insertions(+), 19 deletions(-)
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git push origin dev
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 1.13 KiB | 1.13 MiB/s, done.
+Total 8 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+To https://github.com/onstudiocl/global-parts-forge.git
+   1d52c8f..dc2a29a  dev -> dev
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git merge dev
+Updating 1d52c8f..dc2a29a
+Fast-forward
+ .firebase/hosting.ZGlzdA.cache | 37 +++++++++++++++++++------------------
+ src/components/home/Stats.tsx  |  2 +-
+ 2 files changed, 20 insertions(+), 19 deletions(-)
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/onstudiocl/global-parts-forge.git
+   1d52c8f..dc2a29a  main -> main
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> npm run build
+
+> vite_react_shadcn_ts@0.0.0 build
+> vite build
+
+vite v7.2.2 building client environment for production...
+✓ 2083 modules transformed.
+dist/index.html                                           1.68 kB │ gzip:   0.73 kB
+dist/assets/logo-global-parts-watermark-C4ZAKhQb.png     23.37 kB
+dist/assets/background-gradient-mSv4waXB.jpg             47.15 kB
+dist/assets/logo-BArnQ5b8.png                            47.49 kB
+dist/assets/stats_background-C_TfMXJA.jpg                49.27 kB
+dist/assets/cta-mining-efficiency-DcG_EeLJ.jpg          105.37 kB
+dist/assets/productTypes_Card4-wY2E4-bb.jpg             136.66 kB
+dist/assets/productTypes_Card1-v76Uus-G.jpg             137.92 kB
+dist/assets/productTypes_Card3-BGHr0jgb.jpg             150.58 kB
+dist/assets/hero-sobre-nosotros-B-rsiQvi.jpg            154.07 kB
+dist/assets/footer-background-C4UkZtkM.png              155.89 kB
+dist/assets/productTypes_Card5-DxdE-Q31.jpg             168.16 kB
+dist/assets/productTypes_Card2-Ce3YMx5v.jpg             241.84 kB
+dist/assets/hero-servicios-mineria-C43A_tB6.jpg         260.92 kB
+dist/assets/hero-mining-1-BcRG-nF8.jpg                1,782.35 kB
+dist/assets/hero-mining-2-CKlN2c5i.jpg                1,865.45 kB
+dist/assets/hero-mining-3-Dzpbgwna.jpg                2,519.02 kB
+dist/assets/index-D9RAoFf6.css                           73.71 kB │ gzip:  12.34 kB
+dist/assets/index-CSB3Rk7y.js                           489.43 kB │ gzip: 159.52 kB
+✓ built in 5.37s
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> firebase deploy
+
+=== Deploying to 'global-parts-mining'...
+
+i  deploying hosting
+i  hosting[global-parts-mining]: beginning deploy...
+i  hosting[global-parts-mining]: found 22 files in dist
++  hosting[global-parts-mining]: file upload complete
+i  hosting[global-parts-mining]: finalizing version...
++  hosting[global-parts-mining]: version finalized
+i  hosting[global-parts-mining]: releasing new version...
++  hosting[global-parts-mining]: release complete
+
++  Deploy complete!
+
+Project Console: https://console.firebase.google.com/project/global-parts-mining/overview
+Hosting URL: https://global-parts-mining.web.app
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git checkout dev
+M       .firebase/hosting.ZGlzdA.cache
+Switched to branch 'dev'
+Your branch is up to date with 'origin/dev'.
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git add .
+warning: in the working copy of '.firebase/hosting.ZGlzdA.cache', LF will be replaced by CRLF the next time Git touches it
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git commit -m "Removing the hover effect from the Why GlobalParts section when viewed on a mobile device, adding a logo to the footer, and modifying the text below the logo."
+[dev b81b379] Removing the hover effect from the Why GlobalParts section when viewed on a mobile device, adding a logo to the footer, and modifying the text below the logo.
+ 3 files changed, 23 insertions(+), 22 deletions(-)
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git push origin dev
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 1.18 KiB | 1.18 MiB/s, done.
+Total 9 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+To https://github.com/onstudiocl/global-parts-forge.git
+   dc2a29a..b81b379  dev -> dev
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git merge dev
+Updating dc2a29a..b81b379
+Fast-forward
+ .firebase/hosting.ZGlzdA.cache         | 38 +++++++++++++++++-----------------
+ src/components/Footer.tsx              |  5 +++--
+ src/components/home/WhyGlobalParts.tsx |  2 +-
+ 3 files changed, 23 insertions(+), 22 deletions(-)
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git push origin ain
+error: src refspec ain does not match any
+error: failed to push some refs to 'https://github.com/onstudiocl/global-parts-forge.git'
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/onstudiocl/global-parts-forge.git
+   dc2a29a..b81b379  main -> main
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> npm run build
+
+> vite_react_shadcn_ts@0.0.0 build
+> vite build
+
+vite v7.2.2 building client environment for production...
+✓ 2083 modules transformed.
+dist/index.html                                           1.68 kB │ gzip:   0.72 kB
+dist/assets/logo-global-parts-watermark-C4ZAKhQb.png     23.37 kB
+dist/assets/background-gradient-mSv4waXB.jpg             47.15 kB
+dist/assets/logo-BArnQ5b8.png                            47.49 kB
+dist/assets/stats_background-C_TfMXJA.jpg                49.27 kB
+dist/assets/cta-mining-efficiency-DcG_EeLJ.jpg          105.37 kB
+dist/assets/productTypes_Card4-wY2E4-bb.jpg             136.66 kB
+dist/assets/productTypes_Card1-v76Uus-G.jpg             137.92 kB
+dist/assets/productTypes_Card3-BGHr0jgb.jpg             150.58 kB
+dist/assets/hero-sobre-nosotros-B-rsiQvi.jpg            154.07 kB
+dist/assets/footer-background-C4UkZtkM.png              155.89 kB
+dist/assets/productTypes_Card5-DxdE-Q31.jpg             168.16 kB
+dist/assets/productTypes_Card2-Ce3YMx5v.jpg             241.84 kB
+dist/assets/hero-servicios-mineria-C43A_tB6.jpg         260.92 kB
+dist/assets/hero-mining-1-BcRG-nF8.jpg                1,782.35 kB
+dist/assets/hero-mining-2-CKlN2c5i.jpg                1,865.45 kB
+dist/assets/hero-mining-3-Dzpbgwna.jpg                2,519.02 kB
+dist/assets/index-CgzkFdej.css                           73.74 kB │ gzip:  12.35 kB
+dist/assets/index-CAVyc_UM.js                           489.35 kB │ gzip: 159.46 kB
+✓ built in 4.84s
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> firebase deploy
+
+=== Deploying to 'global-parts-mining'...
+
+i  deploying hosting
+i  hosting[global-parts-mining]: beginning deploy...
+i  hosting[global-parts-mining]: found 22 files in dist
++  hosting[global-parts-mining]: file upload complete
+i  hosting[global-parts-mining]: finalizing version...
++  hosting[global-parts-mining]: version finalized
+i  hosting[global-parts-mining]: releasing new version...
++  hosting[global-parts-mining]: release complete
+
++  Deploy complete!
+
+Project Console: https://console.firebase.google.com/project/global-parts-mining/overview
+Hosting URL: https://global-parts-mining.web.app
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git checkout dev
+M       .firebase/hosting.ZGlzdA.cache
+Switched to branch 'dev'
+Your branch is up to date with 'origin/dev'.
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git add .
+warning: in the working copy of '.firebase/hosting.ZGlzdA.cache', LF will be replaced by CRLF the next time Git touches it
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git commit -m "Modifying the About Us view, editing the Footer footer, and editing the brand in the Home view"
+[dev 65faa06] Modifying the About Us view, editing the Footer footer, and editing the brand in the Home view
+ 4 files changed, 33 insertions(+), 26 deletions(-)
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git push origin dev
+Enumerating objects: 21, done.
+Counting objects: 100% (21/21), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (11/11), 1.65 KiB | 847.00 KiB/s, done.
+Total 11 (delta 8), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (8/8), completed with 8 local objects.
+To https://github.com/onstudiocl/global-parts-forge.git
+   b81b379..65faa06  dev -> dev
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git add .
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git commit -m "Modifying Services View"
+[dev 50474ee] Modifying Services View
+ 1 file changed, 23 insertions(+), 12 deletions(-)
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git push origin dev
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 995 bytes | 995.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To https://github.com/onstudiocl/global-parts-forge.git
+   65faa06..50474ee  dev -> dev
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git add .
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git commit -m "Modifying the Contact view, editing contact details in the Footer component, and adding a link to WhatsApp in the Navbar component's CTA."
+[dev 64ea0cf] Modifying the Contact view, editing contact details in the Footer component, and adding a link to WhatsApp in the Navbar component's CTA.
+ 3 files changed, 20 insertions(+), 17 deletions(-)
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git push origin dev
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 1.14 KiB | 1.14 MiB/s, done.
+Total 8 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+To https://github.com/onstudiocl/global-parts-forge.git
+   50474ee..64ea0cf  dev -> dev
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git merge dev
+Updating b81b379..64ea0cf
+Fast-forward
+ .firebase/hosting.ZGlzdA.cache         | 38 +++++++++++++++++-----------------
+ src/components/Footer.tsx              | 12 +++++------
+ src/components/Navbar.tsx              |  2 +-
+ src/components/home/WhyGlobalParts.tsx |  2 +-
+ src/pages/Contacto.tsx                 | 25 ++++++++++++----------
+ src/pages/QuienesSomos.tsx             | 17 ++++++++++-----
+ src/pages/Servicios.tsx                | 35 ++++++++++++++++++++-----------
+ 7 files changed, 76 insertions(+), 55 deletions(-)
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/onstudiocl/global-parts-forge.git
+   b81b379..64ea0cf  main -> main
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> npm run build
+
+> vite_react_shadcn_ts@0.0.0 build
+> vite build
+
+vite v7.2.2 building client environment for production...
+✓ 2083 modules transformed.
+dist/index.html                                           1.68 kB │ gzip:   0.73 kB
+dist/assets/logo-global-parts-watermark-C4ZAKhQb.png     23.37 kB
+dist/assets/background-gradient-mSv4waXB.jpg             47.15 kB
+dist/assets/logo-BArnQ5b8.png                            47.49 kB
+dist/assets/stats_background-C_TfMXJA.jpg                49.27 kB
+dist/assets/cta-mining-efficiency-DcG_EeLJ.jpg          105.37 kB
+dist/assets/productTypes_Card4-wY2E4-bb.jpg             136.66 kB
+dist/assets/productTypes_Card1-v76Uus-G.jpg             137.92 kB
+dist/assets/productTypes_Card3-BGHr0jgb.jpg             150.58 kB
+dist/assets/hero-sobre-nosotros-B-rsiQvi.jpg            154.07 kB
+dist/assets/footer-background-C4UkZtkM.png              155.89 kB
+dist/assets/productTypes_Card5-DxdE-Q31.jpg             168.16 kB
+dist/assets/productTypes_Card2-Ce3YMx5v.jpg             241.84 kB
+dist/assets/hero-servicios-mineria-C43A_tB6.jpg         260.92 kB
+dist/assets/hero-mining-1-BcRG-nF8.jpg                1,782.35 kB
+dist/assets/hero-mining-2-CKlN2c5i.jpg                1,865.45 kB
+dist/assets/hero-mining-3-Dzpbgwna.jpg                2,519.02 kB
+dist/assets/index-IyBJgeDp.css                           73.86 kB │ gzip:  12.37 kB
+dist/assets/index-CRB3MS_i.js                           490.32 kB │ gzip: 159.79 kB
+✓ built in 4.87s
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> firebase deploy
+
+=== Deploying to 'global-parts-mining'...
+
+i  deploying hosting
+i  hosting[global-parts-mining]: beginning deploy...
+i  hosting[global-parts-mining]: found 22 files in dist
++  hosting[global-parts-mining]: file upload complete
+i  hosting[global-parts-mining]: finalizing version...
++  hosting[global-parts-mining]: version finalized
+i  hosting[global-parts-mining]: releasing new version...
++  hosting[global-parts-mining]: release complete
+
++  Deploy complete!
+
+Project Console: https://console.firebase.google.com/project/global-parts-mining/overview
+Hosting URL: https://global-parts-mining.web.app
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git checkout dev
+M       .firebase/hosting.ZGlzdA.cache
+Switched to branch 'dev'
+Your branch is up to date with 'origin/dev'.
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git add .
+warning: in the working copy of '.firebase/hosting.ZGlzdA.cache', LF will be replaced by CRLF the next time Git touches it
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git status
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .firebase/hosting.ZGlzdA.cache
+        modified:   .gitignore
+
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git commit -m "Adding an exception for the .firebase folder to the .gitignore file"
+[dev aa5d8a8] Adding an exception for the .firebase folder to the .gitignore file
+ 2 files changed, 20 insertions(+), 19 deletions(-)
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git push origin dev
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 795 bytes | 795.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/onstudiocl/global-parts-forge.git
+   64ea0cf..aa5d8a8  dev -> dev
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git merge dev
+Updating 64ea0cf..aa5d8a8
+Fast-forward
+ .firebase/hosting.ZGlzdA.cache | 38 +++++++++++++++++++-------------------
+ .gitignore                     |  1 +
+ 2 files changed, 20 insertions(+), 19 deletions(-)
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/onstudiocl/global-parts-forge.git
+   64ea0cf..aa5d8a8  main -> main
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git checkout dev
+Switched to branch 'dev'
+Your branch is up to date with 'origin/dev'.
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git add .
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git status
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   .gitignore
+
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git commit -m "Updating rule on line 25 in the .gitignore file"
+[dev 64d06de] Updating rule on line 25 in the .gitignore file
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git push origin dev
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 315 bytes | 315.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/onstudiocl/global-parts-forge.git
+   aa5d8a8..64d06de  dev -> dev
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git merge dev
+Updating aa5d8a8..64d06de
+Fast-forward
+ .gitignore | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/onstudiocl/global-parts-forge.git
+   aa5d8a8..64d06de  main -> main
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge> git checkout dev
+Switched to branch 'dev'
+Your branch is up to date with 'origin/dev'.
+PS D:\OneDrive\Desktop\Global Parts Web\global-parts-forge>
