@@ -47,7 +47,7 @@ const CTASection = () => {
               whileTap={{ scale: 0.95 }}
             >
               <Button variant="cta" size="lg" asChild className="text-lg px-8 py-6 h-auto">
-                <Link to="/contacto" className="inline-flex items-center gap-2">
+                <Link to="https://wa.me/+56934087045" className="inline-flex items-center gap-2">
                   Conectemos operaciones!
                   <ArrowRight className="w-5 h-5" />
                 </Link>

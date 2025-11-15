@@ -152,7 +152,7 @@ const QuienesSomos = () => {
                   Innovación tecnológica, respuesta inmediata y soluciones sostenibles que potencian cada operación. Porque en la minería, <span className="text-accent font-semibold">cada segundo cuenta</span> y la <span className="text-primary font-semibold">excelencia no es negociable</span>.
                 </p>
                 <Button variant="cta" size="lg" asChild className="text-lg px-8 py-4 h-auto relative left-1/2 -translate-x-1/2 mt-10">
-                  <Link to="/contacto" className="inline-flex items-center gap-2">
+                  <Link to="https://wa.me/+56934087045" className="inline-flex items-center gap-2">
                     Contáctanos ahora
                   </Link>
                 </Button>

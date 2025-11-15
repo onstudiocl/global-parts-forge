@@ -72,7 +72,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.45, ease: "easeOut" }}
           >
             <Button variant="hero" size="lg" asChild>
-              <Link to="/contacto">Conversemos</Link>
+              <Link to="https://wa.me/+56934087045">Conversemos</Link>
             </Button>
           </motion.div>
         </motion.div>

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Package, Truck, Zap, Cog } from "lucide-react";
+import { Package, Truck, Zap, Cog, Link } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link as Link2 } from "react-router-dom";
 import miningLighting from "@/assets/productTypes_Card1.jpg";
 import wearParts from "@/assets/productTypes_Card2.jpg";
 import thermalBlankets from "@/assets/productTypes_Card3.jpg";
@@ -117,7 +118,9 @@ const ProductTypes = () => {
           className="text-center mt-12"
         >
           <Button variant="cta" size="lg">
-            Ver más
+            <Link2 to="/servicios" className="inline-flex items-center gap-2">
+              Ver más
+            </Link2>
           </Button>
         </motion.div>
       </div>

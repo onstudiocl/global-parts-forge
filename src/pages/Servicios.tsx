@@ -18,9 +18,30 @@ import spCat1Logo from "@/assets/sp_cat1_logo.jpg";
 import spCat1Prd1 from "@/assets/sp_cat1_prd1.jpg";
 import spCat1Prd2 from "@/assets/sp_cat1_prd2.jpg";
 import spCat1Prd3 from "@/assets/sp_cat1_prd3.jpg";
-import productMachinery from "@/assets/productTypes_Card2.jpg";
-import productConveyors from "@/assets/productTypes_Card3.jpg";
-import productElectronics from "@/assets/productTypes_Card4.jpg";
+import spCat2Cover from "@/assets/sp_cat2_cover.jpg";
+import spCat2AdvImage from "@/assets/sp_cat2_adv-image.jpg";
+import spCat2Logo from "@/assets/sp_cat2_logo.jpg";
+import spCat2Prd1 from "@/assets/sp_cat2_prd1.jpg";
+import spCat2Prd2 from "@/assets/sp_cat2_prd2.jpg";
+import spCat2Prd3 from "@/assets/sp_cat2_prd3.jpg";
+import spCat3Cover from "@/assets/sp_cat3_cover.jpg";
+import spCat3AdvImage from "@/assets/sp_cat3_adv-image.jpg";
+import spCat3Logo from "@/assets/sp_cat3_logo.jpg";
+import spCat3Prd1 from "@/assets/sp_cat3_prd1.jpg";
+import spCat3Prd2 from "@/assets/sp_cat3_prd2.jpg";
+import spCat3Prd3 from "@/assets/sp_cat3_prd3.jpg";
+import spCat4Cover from "@/assets/sp_cat4_cover.jpg";
+import spCat4AdvImage from "@/assets/sp_cat4_adv-image.jpg";
+import spCat4Logo from "@/assets/sp_cat4_logo.jpg";
+import spCat4Prd1 from "@/assets/sp_cat4_prd1.jpg";
+import spCat4Prd2 from "@/assets/sp_cat4_prd2.jpg";
+import spCat4Prd3 from "@/assets/sp_cat4_prd3.jpg";
+import spCat5Cover from "@/assets/sp_cat5_cover.jpg";
+import spCat5AdvImage from "@/assets/sp_cat5_adv-image.jpg";
+import spCat5Logo from "@/assets/sp_cat5_logo.jpg";
+import spCat5Prd1 from "@/assets/sp_cat5_prd1.jpg";
+import spCat5Prd2 from "@/assets/sp_cat5_prd2.jpg";
+import spCat5Prd3 from "@/assets/sp_cat5_prd3.jpg";
 import heroServiciosMineria from "@/assets/hero-servicios-mineria.jpg";
 
 const services = [
@@ -124,8 +145,11 @@ const services = [
     id: "wearItems",
     name: "Elementos de desgaste",
     icon: Laptop,
-    image: productMachinery,
+    image: spCat2Cover,
+    advantageImage: spCat2AdvImage,
+    logo: spCat2Logo,
     description: "Cuchillas y cantoneras BYG fabricadas a medida o según referencia original. Diseñadas para ofrecer máxima durabilidad y rendimiento en condiciones de alta abrasión o impacto.",
+    cta: "¿Te interesa algún elemento de desgaste?",
     features: [
       "Fabricación a medida o según número de referencia OEM.",
       "Compatibles con las principales marcas del mercado (Caterpillar, Komatsu, Volvo, Esco y más).",
@@ -137,28 +161,38 @@ const services = [
     advantages: [
       {
         id: 1,
-        title: "Mayor resistencia",
-        description: ""
+        title: "Resistencia la entorno extremo",
+        description: "Las luminarias están diseñadas específicamente para faenas mineras: soportan polvo, niebla salina, lluvia, vibración y shock."
+      },
+      {
+        id: 2,
+        title: "Mejora de visibilidad y ergonomía operativa",
+        description: "Incluyen ópticas especializadas (control de deslumbramiento, luz uniforme) para garantizar mejor visibilidad, reducir la fatiga visual del operador y aumentar la seguridad. "
+      },
+      {
+        id: 3,
+        title: "Adaptadas para equipamiento móvil y fijo",
+        description: "Disponibles tanto en versiones para maquinaria móvil (dumpers, excavadoras, cargadoras) como para infraestructura (planta de procesamiento, cintas, zonas abiertas), lo que amplía su aplicación en el sitio minero"
       }
     ],
     products: [
       {
         id: 1,
-        name: "Barra LED Industrial",
-        description: "Barra LED de 200W con protección IP68",
-        image: productMachinery,
+        name: "Cuchillas y cantoneras a medida",
+        description: "BYG fabrican cuchillas, cantoneras y segmentos a medida en diferentes calidades de aceros: 250 HB; 450 HB; 550 HB. BYG fabricará sus cuchillas según sus especificaciones.  BYG dispone también de una gama completa de cantoneras adaptables para todo tipo de maquinaria: bulldozer, cargadora, traílla, etc",
+        image: spCat2Prd1,
       },
       {
         id: 2,
-        name: "Faro LED Maquinaria",
-        description: "Faro LED direccional para equipos móviles",
-        image: productMachinery,
+        name: "Cuchillas y cantoneras fundidas",
+        description: "BYG ofrece cuchillas y cantoneras fundidas diseñadas para aplicaciones de alta abrasión o impacto. Las cuchillas fundidas están notablemente reforzadas en su perímetro, las cantoneras fundidas, además presentan un nervio que las refuerza en la punta, proporcionando una mayor resistencia a la rotura.",
+        image: spCat2Prd2,
       },
       {
         id: 3,
-        name: "Torre de Iluminación",
-        description: "Torre portátil LED con generador integrado",
-        image: productMachinery,
+        name: "Martillos Neumáticos",
+        description: "Los martillos hidráulicos BYG destacan por su alta potencia de impacto, diseño monobloque reforzado y sistema antigolpe en vacío, que prolonga su vida útil. Están disponibles para diferentes tonelajes de maquinaria, desde excavadoras medianas hasta equipos mineros pesados. Incorporan opciones de engrase automático y son aptos para trabajos de alta abrasión, demolición o minería intensiva.",
+        image: spCat2Prd3,
       },
       // {
       //   id: 4,
@@ -208,8 +242,11 @@ const services = [
     id: "thermalBlankets",
     name: "Mantas térmicas",
     icon: Shield,
-    image: productConveyors,
+    image: spCat3Cover,
+    advantageImage: spCat3AdvImage,
+    logo: spCat3Logo,
     description: "Mantas térmicas MTB diseñadas para proteger equipos y personal en operaciones mineras, reduciendo la exposición a altas temperaturas y disminuyendo significativamente el riesgo de incendios en entornos de alta exigencia térmica.",
+    cta: "¿Te interesa alguna manta térmica?",
     features: [
       "Fabricación a medida para adaptarse a maquinaria, tuberías y componentes críticos.",
       "Resistencia térmica hasta 1100 °C, garantizando protección en entornos extremos.",
@@ -219,28 +256,38 @@ const services = [
     advantages: [
       {
         id: 1,
-        title: "Mayor resistencia",
+        title: "Reduce el riesgo de incendios y quemaduras",
+        description: ""
+      },
+      {
+        id: 2,
+        title: "Hecho a medida para cada equipo",
+        description: ""
+      },
+      {
+        id: 3,
+        title: "Fácil de instalar e inspeccionar",
         description: ""
       }
     ],
     products: [
       {
         id: 1,
-        name: "Manta Térmica Industrial",
-        description: "Manta aislante hasta 1000°C",
-        image: productConveyors,
+        name: "Mantas Térmicas Estándar",
+        description: "Solución estándar – “Manta Térmica MTB”.  Una manta térmica fabricada para resistir altas temperaturas (hasta ~1100 °C) y diseñada para instalación sob medida en maquinaria y equipos móviles",
+        image: spCat3Prd1,
       },
       {
         id: 2,
-        name: "Protector Hidráulico",
-        description: "Protección térmica para cilindros hidráulicos",
-        image: productConveyors,
+        name: "Mantas Térmicas Premium",
+        description: "“Manta Térmica MTB Línea Premium”...La línea premium de MTB incluye materiales de mayor rendimiento, mayor durabilidad, resistencia térmica de hasta 1100 °C, instalación técnica, diseño especializado y servicio completo de ingeniería",
+        image: spCat3Prd2,
       },
       {
         id: 3,
-        name: "Aislante de Válvulas",
-        description: "Funda térmica para válvulas industriales",
-        image: productConveyors,
+        name: "Mantas para Equipos Industriales, Forestales y Navales",
+        description: "MTB fabrica mantas térmicas a medida para equipos forestales, navales y plantas industriales, ofreciendo aislamiento térmico, resistencia a altas temperaturas y mayor protección y eficiencia operativa.",
+        image: spCat3Prd3,
       },
       // {
       //   id: 4,
@@ -290,8 +337,11 @@ const services = [
     id: "tires",
     name: "Neumáticos",
     icon: LifeBuoy,
-    image: productElectronics,
+    image: spCat4Cover,
+    advantageImage: spCat4AdvImage,
+    logo: spCat4Logo,
     description: "Techking es un fabricante de neumáticos radiales de alto rendimiento para minería y construcción, diseñado para operar en los entornos más exigentes y asegurar disponibilidad.",
+    cta: "¿Te interesa algún neumático?",
     features: [
       "Especialización en neumáticos mineros y de construcción Techking se enfoca exclusivamente en neumáticos OTR y TBR, diseñados para rendimiento extremo, tracción y durabilidad en entornos mineros y de obra pesada. ",
       "Colaboración con fabricantes OEM globales Trabaja con más de 40 fabricantes de equipos originales, garantizando compatibilidad, calidad certificada y desarrollo conjunto de productos adaptados a cada aplicación. ",
@@ -301,28 +351,38 @@ const services = [
     advantages: [
       {
         id: 1,
-        title: "Mayor resistencia",
-        description: ""
+        title: "Alta durabilidad",
+        description: "Neumáticos diseñados para resistir condiciones extremas en minería y construcción."
+      },
+      {
+        id: 2,
+        title: "Soporte global",
+        description: "Presencia en más de 100 países con asistencia técnica local."
+      },
+      {
+        id: 3,
+        title: "Eficiencia operativa",
+        description: "Mayor rendimiento y menor costo por hora (CPH) para las flotas"
       }
     ],
     products: [
       {
         id: 1,
-        name: "Sistema de Control",
-        description: "Controlador programable para equipos",
-        image: productElectronics,
+        name: "MATE-S-L3",
+        description: "Neumático diseñado para máximo rendimiento y tracción, con excelente control en cargadores exigentes y mayor resistencia al desgaste. Su puente de bloques reforzado y compuesto especial prolongan la vida útil incluso en condiciones severas.",
+        image: spCat4Prd1,
       },
       {
         id: 2,
-        name: "Sensores Industriales",
-        description: "Sensores de temperatura y presión",
-        image: productElectronics,
+        name: "ETDT",
+        description: "Neumático con alta tracción y menor deslizamiento, gracias a su diseño especial de banda de rodamiento. Ofrece gran resistencia a cortes por su compuesto reforzado y un mayor kilometraje gracias a sus bloques grandes y duraderos.",
+        image: spCat4Prd2,
       },
       {
         id: 3,
-        name: "Variador de Frecuencia",
-        description: "Variador para motores eléctricos",
-        image: productElectronics,
+        name: "PROLHD",
+        description: "Neumático con perfil uniforme que distribuye mejor la carga, reduciendo daños parciales y desgaste. Su proceso de fabricación innovador mejora la durabilidad y el índice TKPH, mientras que sus nuevos compuestos y refuerzos aumentan la resistencia a cortes y abrasión.",
+        image: spCat4Prd3,
       },
       // {
       //   id: 4,
@@ -372,8 +432,11 @@ const services = [
     id: "otherProducts",
     name: "Otros productos",
     icon: Settings,
-    image: productElectronics,
+    image: spCat5Cover,
+    advantageImage: spCat5AdvImage,
+    logo: spCat5Logo,
     description: "Ofrecemos una amplia gama de repuestos para equipos mineros garantizando rendimiento, durabilidad y disponibilidad operativa. Nuestros productos cumplen con los más altos estándares de calidad para entornos mineros exigentes.",
+    cta: "¿Te interesa algún producto?",
     features: [
       "Bujes",
       "Repuestos de baldes",
@@ -386,28 +449,38 @@ const services = [
     advantages: [
       {
         id: 1,
-        title: "Mayor resistencia",
-        description: ""
+        title: "Experiencia y conocimiento técnico",
+        description: "Más de 25 años en la industria minera, ofreciendo soluciones precisas y confiables para equipos de gran exigencia."
+      },
+      {
+        id: 2,
+        title: "Precios más económicos manteniendo calidad OEM",
+        description: "Ssuministra repuestos con altos estándares de calidad a costos competitivos, garantizando el mismo rendimiento que los originales."
+      },
+      {
+        id: 3,
+        title: "Atención personalizada y rápida respuesta",
+        description: "Enfoque en la continuidad operativa del cliente, con entregas ágiles, soporte técnico y alianzas estratégicas con fabricantes internacionales."
       }
     ],
     products: [
       {
         id: 1,
-        name: "Sistema de Control",
-        description: "Controlador programable para equipos",
-        image: productElectronics,
+        name: "Zapatas para palas P&H Y CAT",
+        description: "Las zapatas para equipos mineros son componentes fundidos de aleación de acero de alta resistencia, diseñadas para soportar grandes cargas de compresión y tracción. Proporcionan excelente resistencia al desgaste, impacto y deformación, gracias a su tratamiento térmico y composición especial. Forman parte del sistema de orugas, distribuyendo el peso del equipo y garantizando estabilidad y tracción incluso en terrenos de alta abrasión",
+        image: spCat5Prd1,
       },
       {
         id: 2,
-        name: "Sensores Industriales",
-        description: "Sensores de temperatura y presión",
-        image: productElectronics,
+        name: "Bujes y pasadores para baldes",
+        description: "Los bujes y pasadores forjados están fabricados con acero AcMn de alta calidad, garantizando homogeneidad estructural y excelente resistencia mecánica. Presentan un diseño optimizado buje-pasador, que mejora la durabilidad y distribución de cargas. Los pasadores cuentan con overlay de 550–580 BHN y espesor de 9 a 12 mm, ofreciendo mayor vida útil y reducción de desgaste",
+        image: spCat5Prd2,
       },
       {
         id: 3,
-        name: "Variador de Frecuencia",
-        description: "Variador para motores eléctricos",
-        image: productElectronics,
+        name: "Torres solares",
+        description: "Las torres solares no solo se utilizan para iluminación, sino también para alimentar sistemas de comunicación, cámaras de seguridad, sensores ambientales y equipos auxiliares en faenas mineras e industriales. Ofrecen energía limpia y autónoma, reduciendo emisiones y costos operativos, con estructura robusta y fácil instalación, ideales para zonas remotas o de difícil acceso.",
+        image: spCat5Prd3,
       },
       // {
       //   id: 4,
@@ -603,9 +676,9 @@ const Servicios = () => {
                   <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary text-center pt-5">
                       Ventajas
                   </h2>
-                  <ul className="space-y-3">
+                  <ul className="space-y-4">
                       {currentService.advantages.map((advantage) => (
-                        <li key={advantage.id} className="outline outline-red-950/70 rounded-xl py-2">
+                        <li key={advantage.id} className="h-30 outline outline-red-950/70 rounded-xl py-3">
                           <div className="flex items-center justify-center">
                             <img src={spUlIcon} alt="Li Icon" className="size-10" />
                             <h3 className="text-2xl font-light ml-3">{advantage.title}</h3>
