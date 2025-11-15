@@ -10,8 +10,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Lightbulb, Laptop, Shield, Package } from "lucide-react";
-import productParts from "@/assets/productTypes_Card1.jpg";
+import { Lightbulb, Laptop, Shield, LifeBuoy, Settings, Zap } from "lucide-react";
+import spUlIcon from "@/assets/sp_ul_icon.png";
+import spCat1Cover from "@/assets/sp_cat1_cover.jpg";
+import spCat1AdvImage from "@/assets/sp_cat1_adv-image.jpg";
+import spCat1Logo from "@/assets/sp_cat1_logo.jpg";
+import spCat1Prd1 from "@/assets/sp_cat1_prd1.jpg";
+import spCat1Prd2 from "@/assets/sp_cat1_prd2.jpg";
+import spCat1Prd3 from "@/assets/sp_cat1_prd3.jpg";
 import productMachinery from "@/assets/productTypes_Card2.jpg";
 import productConveyors from "@/assets/productTypes_Card3.jpg";
 import productElectronics from "@/assets/productTypes_Card4.jpg";
@@ -22,8 +28,11 @@ const services = [
     id: "miningLighting",
     name: "Iluminación minera",
     icon: Lightbulb,
-    image: productParts,
+    image: spCat1Cover,
+    advantageImage: spCat1AdvImage,
+    logo: spCat1Logo,
     description: "Sistemas de iluminación LED Phoenix diseñados para operar en los entornos mineros más exigentes, garantizando seguridad, productividad y eficiencia energética en equipos e infraestructuras.",
+    cta: "¿Te interesa algún sistema de iluminación",
     features: [
       "Tecnología LED de alta potencia para uso en minería subterránea y a cielo abierto.",
       "Iluminación resistente a vibraciones, polvo, humedad y temperaturas extremas y con opciones AC y DC.",
@@ -33,72 +42,82 @@ const services = [
     ],
     advantages: [
       {
-        id: 1,
+        id: "1",
         title: "Mayor resistencia",
-        description: ""
+        description: "Cuchillas y cantoneras fundidas con refuerzo perimetral y nervio en la punta para evitar roturas."
+      },
+      {
+        id: "2",
+        title: "Protección total",
+        description: "Grosor uniforme que protege la cabeza del tornillo y prolonga la vida útil del sistema."
+      },
+      {
+        id: "3",
+        title: "Adaptabilidad",
+        description: "Fabricación personalizada para bulldozers, cargadoras, traillas y más."
       }
     ],
     products: [
       {
         id: 1,
-        name: "Revestimiento de Molino",
-        description: "Revestimientos de acero al manganeso de alta resistencia",
-        image: productParts,
+        name: "Iluminacion AC Grandes Equipos",
+        description: "La ModCom 3 de Phoenix es una luminaria LED de alta potencia y durabilidad, diseñada especialmente para palas mineras. Ofrece 130 lm/W, tecnología de monitoreo térmico y resistencia a impacto, vibración y corrosión. Está disponible en tres tamaños (LO, HI y MAX), con distintas ópticas, regulación de intensidad y versiones para entornos industriales o marítimos exigentes.",
+        image: spCat1Prd1,
       },
       {
         id: 2,
-        name: "Martillos de Impacto",
-        description: "Martillos forjados para chancadores de alto rendimiento",
-        image: productParts,
+        name: "Iluminacion DC Equipos Mineros",
+        description: "La serie Sturdilite Master de Phoenix es una línea premium de luces LED robustas para equipos móviles en minería, puertos y construcción. Ofrece alta resistencia a impactos, vibraciones y condiciones extremas, garantizando seguridad y visibilidad. Disponible con ópticas antideslumbrantes y LEDs blancos o ámbar, se adapta a diversas máquinas y condiciones climáticas.",
+        image: spCat1Prd2,
       },
       {
         id: 3,
-        name: "Blindajes",
-        description: "Blindajes de acero templado para protección de equipos",
-        image: productParts,
+        name: "Iluminacion Danger Light",
+        description: "La Danger Light® de Phoenix proyecta un haz rojo estrecho que delimita zonas peligrosas alrededor del equipo, mejorando la seguridad y prevención de accidentes. Ideal para palas eléctricas y excavadoras, permite una carga lateral más segura y visible. Ofrece 3800 lúmenes LED, operación libre de mantenimiento y alta resistencia a impactos y vibraciones.",
+        image: spCat1Prd3,
       },
-      {
-        id: 4,
-        name: "Dientes Excavadora",
-        description: "Dientes de excavadora con sistema de fijación rápida",
-        image: productParts,
-      },
-      {
-        id: 5,
-        name: "Placas de Desgaste",
-        description: "Placas de acero reforzado para zonas de alto desgaste",
-        image: productParts,
-      },
-      {
-        id: 6,
-        name: "Cuchillas",
-        description: "Cuchillas de corte de alta durabilidad",
-        image: productParts,
-      },
-      {
-        id: 7,
-        name: "Pernos de Anclaje",
-        description: "Pernos y fijaciones de alta resistencia",
-        image: productParts,
-      },
-      {
-        id: 8,
-        name: "Bujes",
-        description: "Bujes de bronce y acero para maquinaria pesada",
-        image: productParts,
-      },
-      {
-        id: 9,
-        name: "Rodillos",
-        description: "Rodillos industriales de alto rendimiento",
-        image: productParts,
-      },
-      {
-        id: 10,
-        name: "Cribas",
-        description: "Cribas y mallas de clasificación de materiales",
-        image: productParts,
-      },
+      // {
+      //   id: 4,
+      //   name: "Dientes Excavadora",
+      //   description: "Dientes de excavadora con sistema de fijación rápida",
+      //   image: productParts,
+      // },
+      // {
+      //   id: 5,
+      //   name: "Placas de Desgaste",
+      //   description: "Placas de acero reforzado para zonas de alto desgaste",
+      //   image: productParts,
+      // },
+      // {
+      //   id: 6,
+      //   name: "Cuchillas",
+      //   description: "Cuchillas de corte de alta durabilidad",
+      //   image: productParts,
+      // },
+      // {
+      //   id: 7,
+      //   name: "Pernos de Anclaje",
+      //   description: "Pernos y fijaciones de alta resistencia",
+      //   image: productParts,
+      // },
+      // {
+      //   id: 8,
+      //   name: "Bujes",
+      //   description: "Bujes de bronce y acero para maquinaria pesada",
+      //   image: productParts,
+      // },
+      // {
+      //   id: 9,
+      //   name: "Rodillos",
+      //   description: "Rodillos industriales de alto rendimiento",
+      //   image: productParts,
+      // },
+      // {
+      //   id: 10,
+      //   name: "Cribas",
+      //   description: "Cribas y mallas de clasificación de materiales",
+      //   image: productParts,
+      // },
     ],
   },
   {
@@ -141,48 +160,48 @@ const services = [
         description: "Torre portátil LED con generador integrado",
         image: productMachinery,
       },
-      {
-        id: 4,
-        name: "Reflector Industrial",
-        description: "Reflector LED 500W para áreas amplias",
-        image: productMachinery,
-      },
-      {
-        id: 5,
-        name: "Luminaria Antiexplosiva",
-        description: "Luminaria certificada para zonas ATEX",
-        image: productMachinery,
-      },
-      {
-        id: 6,
-        name: "Luz de Trabajo",
-        description: "Luz portátil LED recargable",
-        image: productMachinery,
-      },
-      {
-        id: 7,
-        name: "Baliza de Advertencia",
-        description: "Baliza LED intermitente para equipos",
-        image: productMachinery,
-      },
-      {
-        id: 8,
-        name: "Faro de Búsqueda",
-        description: "Faro orientable de largo alcance",
-        image: productMachinery,
-      },
-      {
-        id: 9,
-        name: "Iluminación Cabina",
-        description: "Kit de iluminación interior para cabinas",
-        image: productMachinery,
-      },
-      {
-        id: 10,
-        name: "Panel LED",
-        description: "Panel LED de montaje para talleres",
-        image: productMachinery,
-      },
+      // {
+      //   id: 4,
+      //   name: "Reflector Industrial",
+      //   description: "Reflector LED 500W para áreas amplias",
+      //   image: productMachinery,
+      // },
+      // {
+      //   id: 5,
+      //   name: "Luminaria Antiexplosiva",
+      //   description: "Luminaria certificada para zonas ATEX",
+      //   image: productMachinery,
+      // },
+      // {
+      //   id: 6,
+      //   name: "Luz de Trabajo",
+      //   description: "Luz portátil LED recargable",
+      //   image: productMachinery,
+      // },
+      // {
+      //   id: 7,
+      //   name: "Baliza de Advertencia",
+      //   description: "Baliza LED intermitente para equipos",
+      //   image: productMachinery,
+      // },
+      // {
+      //   id: 8,
+      //   name: "Faro de Búsqueda",
+      //   description: "Faro orientable de largo alcance",
+      //   image: productMachinery,
+      // },
+      // {
+      //   id: 9,
+      //   name: "Iluminación Cabina",
+      //   description: "Kit de iluminación interior para cabinas",
+      //   image: productMachinery,
+      // },
+      // {
+      //   id: 10,
+      //   name: "Panel LED",
+      //   description: "Panel LED de montaje para talleres",
+      //   image: productMachinery,
+      // },
     ],
   },
   {
@@ -223,54 +242,54 @@ const services = [
         description: "Funda térmica para válvulas industriales",
         image: productConveyors,
       },
-      {
-        id: 4,
-        name: "Manta de Escape",
-        description: "Protección térmica para sistemas de escape",
-        image: productConveyors,
-      },
-      {
-        id: 5,
-        name: "Cubierta de Motor",
-        description: "Aislante térmico para motores diesel",
-        image: productConveyors,
-      },
-      {
-        id: 6,
-        name: "Protector de Turbo",
-        description: "Manta térmica para turbocompresores",
-        image: productConveyors,
-      },
-      {
-        id: 7,
-        name: "Aislante de Tubería",
-        description: "Sistema de aislamiento para tuberías",
-        image: productConveyors,
-      },
-      {
-        id: 8,
-        name: "Manta Flexible",
-        description: "Protección térmica flexible y moldeable",
-        image: productConveyors,
-      },
-      {
-        id: 9,
-        name: "Kit de Protección",
-        description: "Kit completo de mantas térmicas",
-        image: productConveyors,
-      },
-      {
-        id: 10,
-        name: "Aislante Removible",
-        description: "Sistema de aislamiento de fácil instalación",
-        image: productConveyors,
-      },
+      // {
+      //   id: 4,
+      //   name: "Manta de Escape",
+      //   description: "Protección térmica para sistemas de escape",
+      //   image: productConveyors,
+      // },
+      // {
+      //   id: 5,
+      //   name: "Cubierta de Motor",
+      //   description: "Aislante térmico para motores diesel",
+      //   image: productConveyors,
+      // },
+      // {
+      //   id: 6,
+      //   name: "Protector de Turbo",
+      //   description: "Manta térmica para turbocompresores",
+      //   image: productConveyors,
+      // },
+      // {
+      //   id: 7,
+      //   name: "Aislante de Tubería",
+      //   description: "Sistema de aislamiento para tuberías",
+      //   image: productConveyors,
+      // },
+      // {
+      //   id: 8,
+      //   name: "Manta Flexible",
+      //   description: "Protección térmica flexible y moldeable",
+      //   image: productConveyors,
+      // },
+      // {
+      //   id: 9,
+      //   name: "Kit de Protección",
+      //   description: "Kit completo de mantas térmicas",
+      //   image: productConveyors,
+      // },
+      // {
+      //   id: 10,
+      //   name: "Aislante Removible",
+      //   description: "Sistema de aislamiento de fácil instalación",
+      //   image: productConveyors,
+      // },
     ],
   },
   {
     id: "tires",
     name: "Neumáticos",
-    icon: Package,
+    icon: LifeBuoy,
     image: productElectronics,
     description: "Techking es un fabricante de neumáticos radiales de alto rendimiento para minería y construcción, diseñado para operar en los entornos más exigentes y asegurar disponibilidad.",
     features: [
@@ -305,54 +324,54 @@ const services = [
         description: "Variador para motores eléctricos",
         image: productElectronics,
       },
-      {
-        id: 4,
-        name: "Kit de Herramientas",
-        description: "Set profesional de herramientas",
-        image: productElectronics,
-      },
-      {
-        id: 5,
-        name: "Equipo de Seguridad",
-        description: "EPP certificado para minería",
-        image: productElectronics,
-      },
-      {
-        id: 6,
-        name: "Cables Industriales",
-        description: "Cables de potencia certificados",
-        image: productElectronics,
-      },
-      {
-        id: 7,
-        name: "Conectores",
-        description: "Conectores eléctricos industriales",
-        image: productElectronics,
-      },
-      {
-        id: 8,
-        name: "Instrumentación",
-        description: "Instrumentos de medición profesionales",
-        image: productElectronics,
-      },
-      {
-        id: 9,
-        name: "Filtros",
-        description: "Filtros hidráulicos y de aire",
-        image: productElectronics,
-      },
-      {
-        id: 10,
-        name: "Lubricantes",
-        description: "Lubricantes especializados para minería",
-        image: productElectronics,
-      },
+      // {
+      //   id: 4,
+      //   name: "Kit de Herramientas",
+      //   description: "Set profesional de herramientas",
+      //   image: productElectronics,
+      // },
+      // {
+      //   id: 5,
+      //   name: "Equipo de Seguridad",
+      //   description: "EPP certificado para minería",
+      //   image: productElectronics,
+      // },
+      // {
+      //   id: 6,
+      //   name: "Cables Industriales",
+      //   description: "Cables de potencia certificados",
+      //   image: productElectronics,
+      // },
+      // {
+      //   id: 7,
+      //   name: "Conectores",
+      //   description: "Conectores eléctricos industriales",
+      //   image: productElectronics,
+      // },
+      // {
+      //   id: 8,
+      //   name: "Instrumentación",
+      //   description: "Instrumentos de medición profesionales",
+      //   image: productElectronics,
+      // },
+      // {
+      //   id: 9,
+      //   name: "Filtros",
+      //   description: "Filtros hidráulicos y de aire",
+      //   image: productElectronics,
+      // },
+      // {
+      //   id: 10,
+      //   name: "Lubricantes",
+      //   description: "Lubricantes especializados para minería",
+      //   image: productElectronics,
+      // },
     ],
   },
   {
     id: "otherProducts",
     name: "Otros productos",
-    icon: Package,
+    icon: Settings,
     image: productElectronics,
     description: "Ofrecemos una amplia gama de repuestos para equipos mineros garantizando rendimiento, durabilidad y disponibilidad operativa. Nuestros productos cumplen con los más altos estándares de calidad para entornos mineros exigentes.",
     features: [
@@ -531,7 +550,10 @@ const Servicios = () => {
             <div className="bg-gradient-to-br from-secondary to-background rounded-3xl p-8 md:p-12 lg:p-16 min-h-[70vh] flex flex-col justify-center shadow-xl">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
-                  <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary">
+                  <div>
+                    <img src={currentService.logo} alt="Logo" className="rounded-xl" />
+                  </div>
+                  <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary pt-5">
                     {currentService.name}
                   </h2>
                   <p className="text-xl text-muted-foreground leading-relaxed">
@@ -564,6 +586,40 @@ const Servicios = () => {
               </div>
             </div>
 
+            {/* Products Advantages */}
+            <div className="bg-gradient-to-br from-secondary to-background rounded-3xl p-8 md:p-12 lg:p-16 min-h-[70vh] flex flex-col justify-center shadow-xl">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="relative">
+                  <motion.img
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    src={currentService.advantageImage}
+                    alt={currentService.name}
+                    className="w-full rounded-2xl shadow-2xl"
+                  />
+                </div>
+                <div className="space-y-6">
+                  <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary text-center pt-5">
+                      Ventajas
+                  </h2>
+                  <ul className="space-y-3">
+                      {currentService.advantages.map((advantage) => (
+                        <li key={advantage.id} className="outline outline-red-950/70 rounded-xl py-2">
+                          <div className="flex items-center justify-center">
+                            <img src={spUlIcon} alt="Li Icon" className="size-10" />
+                            <h3 className="text-2xl font-light ml-3">{advantage.title}</h3>
+                          </div>
+                          <p className="text-center px-10">
+                            {advantage.description}
+                          </p>
+                        </li>
+                      ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
             {/* Products Carousel */}
             <div className="space-y-8">
               <h3 className="text-3xl font-heading font-bold text-primary text-center">
@@ -582,18 +638,18 @@ const Servicios = () => {
                       <CarouselItem key={product.id} className="md:basis-1/2 lg:basis-1/3">
                         <div className="p-4">
                           <div className="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                            <div className="aspect-square overflow-hidden">
+                            <div className="h-[250px] overflow-hidden">
                               <img
                                 src={product.image}
                                 alt={product.name}
                                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                               />
                             </div>
-                            <div className="p-6 space-y-2">
+                            <div className="p-6 space-y-2 h-[320px]">
                               <h4 className="text-xl font-heading font-semibold text-foreground">
                                 {product.name}
                               </h4>
-                              <p className="text-muted-foreground line-clamp-2">
+                              <p className="text-muted-foreground ">
                                 {product.description}
                               </p>
                             </div>
@@ -609,20 +665,23 @@ const Servicios = () => {
             </div>
 
             {/* CTA Section */}
-            <div className="bg-gradient-to-r from-primary to-accent rounded-3xl p-8 md:p-12 text-center shadow-xl">
-              <h3 className="text-3xl md:text-4xl font-heading font-bold text-primary-foreground mb-4">
-                ¿Interesado en nuestros productos?
-              </h3>
-              <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-                Contacta a GP Solutions para obtener más información y cotizaciones personalizadas
+            <div className="bg-gradient-to-r from-red-950 via-zinc-600 to-red-950 rounded-xl p-8 md:p-12 text-center shadow-xl">
+              <div className="flex items-center justify-center">
+                <Zap className="text-accent size-9" />
+                <h3 className="text-3xl md:text-4xl font-heading font-bold text-zinc-100 mb-4 ml-2">
+                  {currentService.cta}
+                </h3>
+              </div>
+              <p className="text-xl text-zinc-100 mb-8 max-w-2xl mx-auto">
+                Cuéntanos qué necesitas y nos pondremos en acción de inmediato. <br />Porque en la minería, <span className="text-accent">cada segundo cuenta.</span>
               </p>
               <Button
                 size="lg"
-                variant="secondary"
+                variant="cta"
                 className="text-lg px-8 py-6 hover:scale-105 transition-transform"
-                onClick={() => window.location.href = "/contacto"}
+                onClick={() => window.open("https://wa.me/+56934087045")}
               >
-                Contactar ahora
+                Conversemos ahora
               </Button>
             </div>
           </motion.div>
